@@ -1,0 +1,2186 @@
+Name: Polski
+Authors:
+- Essence
+- Theta
+- Eur Mom
+- Discussions
+- Shiftyrose
+Translations:
+  Roles:
+    Assassin:
+      RoleName: Assassin
+      Description: >-
+        Assassin to Impostor, ktory moze rowniez zabijac graczy nie bedacych Impostorami, zgadujac ich role. Nie mozesz zgadnac roli zadnego Impostora.
+
+        Podczas spotkania mozesz wybrac gracza, ktorego chcesz zgadnac, glosujac na niego. Po glosowaniu mozesz uzyc komendy na czacie (/cmd [nazwaroli]), aby wybrac role, ktora chcesz zgadnac.
+
+        Aby zakonczyc zgadywanie, zaglosuj ponownie na gracza, aby potwierdzic, ze wszystko jest poprawne. Jesli zgadniecie jest poprawne, zgadywany gracz zginie, w przeciwnym razie zginie Assassin.
+
+        Aby anulowac zgadywanie, mozesz pominac glosowanie w dowolnym momencie, a twoj nastepny glos bedzie normalny.
+
+        Uwaga: Odkryte role (np. od Oracle) nie moga byc zgadywane.
+      Blurb: Zabijaj i Zgaduj Role Graczy
+    Blackmailer:
+      RoleName: Blackmailer
+      Description: Zmien ksztalt w gracza, aby go szantazowac. Podczas spotkania, szantazowany gracz bedzie mial tekst "SZANTAZOWANY", ktory moze byc widziany przez wszystkich graczy.\n\nJesli gracz sprobuje mowic podczas szantazu, moze otrzymac ostrzezenie przypominajace mu o zachowaniu ciszy. Gdy osiagna maksymalny prog ostrzezen (ustalony przez hosta) zostana zabici.
+      Blurb: Szantazuj Graczy Aby Zostali Cicho
+      Options:
+        WarningsUntilDeath: Ostrzezenia Do Smierci
+        ShowBlackmailedToAll: Pokaz Szantazowanego Wszystkim
+        BlackmailerIsSSBased: Blackmailer Uzywa Zmiennoksztaltnego
+      BlackmailedMessage: Zostales szantazowany! Wyslanie wiadomosci na czacie cie zabije.
+      WarningMessage: Nie mozesz mowic! Jesli znowu sie odezwiesz, mozesz zginac.
+      BlackmailedText: SZANTAZOWANY
+      BlackmailingMode: Szantazowanie
+      BlackmailButtonText: Szantazuj
+    BountyHunter:
+      RoleName: Bounty Hunter
+      Description: Bounty Hunter otrzyma cel do zabicia (oznaczony czarnym nickiem). Jesli Bounty Hunter zabije swoj cel, jego czas odnowienia zabojstwa jest znacznie skrocony na nastepne zabicie.\n\nCzas potrzebny na zmiane celu, czas odnowienia po zabiciu celu oraz czas odnowienia po zabiciu gracza nie bedacego celem sa wczesniej ustalane przez hosta w ustawieniach.
+      Blurb: Zabijaj Cele Aby Skrocic Czas Odnowienia Zabojstwa
+      Options:
+        TimeUntilNewTarget: Czas Do Nowego Celu
+        AfterKillingTarget: Odnowienie Zabojstwa Po Zabiciu Celu
+        AfterKillingNonTarget: Odnowienie Zabojstwa Po Zabiciu Innego Gracza
+    Camouflager:
+      RoleName: Camouflager
+      Description: Zmien ksztalt w gracza i spraw, by kazdy zyjacy gracz zmienil sie w tego samego gracza na krotki czas. Po uplywie tego czasu, lub jesli zwolano spotkanie, wszyscy gracze wracaja do swojej normalnej formy.
+      Blurb: Zakamufluj Wszystkich
+      Options:
+        CamouflageCooldown: Odnowienie Kamuflazu
+        CamouflageDuration: Czas Trwania Kamuflazu
+      ButtonText: Zakamufluj
+    Consort:
+      RoleName: Consort
+      Description: Uzyj przycisku Zwierzaka, aby przelaczac sie miedzy Blokowaniem Roli a Zabijaniem.\n\nBlokowanie roli zapobiega zabijaniu, zglaszaniu cial, zwolywaniu spotkan, zmianie ksztaltu i wchodzeniu do wentylacji.
+      Blurb: Blokuj Role Graczy
+      Options:
+        roleblockCooldown: Odnowienie Blokady Roli
+        roleblockDuration: Czas Trwania Blokady Roli
+      ButtonText: Zablokuj
+    Creeper:
+      RoleName: Creeper
+      Description: Jedynym zadaniem Creepera jest sianie jak najwiekszego zniszczenia. Uzyj przycisku Zwierzaka lub Zmiany Ksztaltu (ustala host), aby zabic siebie i kazdego gracza w okreslonym promieniu.\n\nMozesz miec szczescie i zostac ochroniony przed swoimi bombami za pomoca tarczy (np. tarcza Medica) i przezyc. Jednak jesli ta opcja jest wylaczona, nawet tarcza Medica cie nie ochroni.
+      Blurb: Wysadz Graczy
+      Options:
+        BomberProtection: Bomber Chroniony Tarcza
+        ExplosionRadius: Promien Eksplozji
+        CreeperProtection: Chroniony Tarcza
+        CreeperGracePeriod: Okres Laski
+        CanKillNormal: Moze Zabijac Normalnie
+      ExplosionGracePeriod: 'Okres Laski Eksplozji: {0}'
+      ButtonText: Detonuj
+    Disperser:
+      RoleName: Disperser
+      Description: Disperser moze uzyc przycisku Zwierzaka, aby teleportowac wszystkich do losowej wentylacji.
+      Blurb: Teleportuj Graczy
+      Options:
+        DisperseCooldown: Odnowienie Rozproszenia
+        DisperserGetsDispersed: Disperser::0 Jest Rozpraszany
+      ButtonText: Rozprosz
+    Escapist:
+      RoleName: Escapist
+      Description: Pierwsze uzycie przycisku Zwierzaka zaznaczy twoja obecna lokalizacje.\n\nPo ustalonym czasie odnowienia mozesz uzyc przycisku Zwierzaka ponownie, aby teleportowac sie z powrotem do zaznaczonej lokalizacji. To spowoduje ponowne ladowanie umiejetnosci oznaczania.
+      Blurb: Oznacz Lokalizacje i Strategicznie Ucieknij
+      Options:
+        MarkCooldown: Odnowienie Po Oznaczeniu
+        EscapeCooldown: Odnowienie Po Ucieczce
+        ClearAfterMeeting: Usun Oznaczenie Po Spotkaniu
+      MarkButtonText: Oznacz
+      EscapeButtonText: Ucieknij
+    FireWorks:
+      RoleName: FireWorks
+      Description: >-
+        Uzyj przycisku Zmiany Ksztaltu, aby podlozyc fajerwerk (tzn. bombe) na mapie. Mozesz nastepnie uzyc przycisku Zwierzaka w dowolnym momencie, aby zdetonowac fajerwerki, zabijajac wszystkich w ich promieniu.
+
+
+        Uwaga: Eksplozja przechodzi przez sciany. FireWorks moze rowniez zabijac normalnie miedzy podkladaniem fajerwerkow.
+      Blurb: Podkladaj Fajerwerki Aby Wysadzac Graczy
+      Options:
+        PlantFireworkCooldown: Odnowienie Podkladania Fajerwerkow
+        TotalFireworks: Calkowita Liczba Fajerwerkow
+        AbleToDetonateText: Detonuj Tylko Jako Ostatni Impostor::0
+        AbleToDetonateEarly: Detonuj Tylko Jako Ostatni Impostor::0
+      AbleToDetonateEarly: Detonuj Tylko Jako Ostatni Impostor::0
+      AbleToDetonateText: Detonacje Gotowe!
+      Mutable:
+        DetonateOnlyWhenLastImpostor: Mozesz detonowac tylko wtedy, gdy jestes ostatnim impostorem, zamiast w dowolnym momencie.
+      ButtonText: Podloz
+    Freezer:
+      RoleName: Freezer
+      Description: Freezer moze zamrozic gracza w miejscu, zmieniajac sie w niego. Gracz bedzie zamrozony dopoki Freezer nie wroci do swojej postaci. Freezer moze zabijac normalnie, bedac zmienionym lub nie.
+      Blurb: Zmien Ksztalt W Gracza Aby Zamrozic Go W Miejscu
+      Options:
+        FreezeCooldown: Odnowienie Zamrozenia
+        FreezeDuration: Czas Trwania Zamrozenia
+      ButtonText: Zamroz
+    Grenadier:
+      RoleName: Grenadier
+      Description: Uzyj przycisku Zwierzaka, aby odpalic bombe, ktora oslepi pobliskich graczy na ustalonym dystansie. Moze to rowniez oslepic sojuszniczych Impostorow w zaleznosci od ustawien hosta. W tym czasie Grenadier moze zabijac niezauwazony.
+      Blurb: Oslep Pobliskich Graczy
+      Options:
+        AmountOfGrenades: Ilosc Granatow
+        BlindCooldown: Odnowienie Oslepienia
+        BlindDuration: Czas Trwania Oslepienia
+        BlindRadius: Promien Efektu Oslepienia
+        CanBlindAllies: Moze Oslepiac Sojusznikow
+      ButtonText: Granat
+    IdentityThief:
+      RoleName: Identity Thief
+      Description: Identity Thief zmienia ksztalt w osobe, ktora zabije. Przebranie trwa dopoki nie bedzie gotowy do ponownego zabicia, lub opcjonalnie, dopoki nie zabije innego gracza i nie zmieni sie w swoja kolejna ofiare.
+      Blurb: Zmien Ksztalt W Swoja Ofiare
+      Options:
+        DisguiseSettings: Ustawienia Przebrania
+        UntilKillCooldown: Odnowienie Zabojstwa
+        UntilNextKill: Nastepne Zabojstwo
+        TotallySwapIdentity: Calkowita Zmiana Tozsamosci
+        UntilMeeting: Do Spotkania
+    Impostor:
+      RoleName: Impostor
+      Blurb: Zabijaj Crewmate'ow i Neutralnych.
+      Description: Zwykly impostor. Zabij wszystkich innych graczy, z wyjatkiem twoich sojusznikow, i badz ostatnia frakcja, ktora przetrwa.
+    Janitor:
+      RoleName: Janitor
+      Description: Janitor moze wybierac miedzy zabijaniem a sprzataniem na koniec czasu odnowienia zabojstwa.\n\nJanitor moze posprzatac cialo, uzywajac przycisku zgloszenia, aby stalo sie niemozliwe do zgloszenia, lub uzyc przycisku zabojstwa, aby zabijac graczy.\n\nJanitor moze normalnie zglaszac ciala tylko wtedy, gdy jego umiejetnosc sie odnawia.
+      Blurb: Sprzataj Ciala Aby Nie Mozna Bylo Ich Zglosic.
+      Options:
+        CleanOnKill: Sprzataj Przy Zabojstwie
+        KillCooldownMultiplier: Mnoznik Odnowienia Zabojstwa
+      ButtonText: Sprzataj
+    Mafioso:
+      Options:
+        StartsGameWithGun: Rozpoczyna Gre Z Bronia
+        ModifyShopCosts: Modyfikuj Ceny W Sklepie
+        GunCost: Koszt Broni
+        BulletCost: Koszt Kuli
+        VestCost: Koszt Kamizelki
+        RoleRevealerCost: Koszt Odkrywcy Rol
+        GunCooldown: Odnowienie Broni
+        CashFromReporting: Gotowka Ze Zglaszania Cial
+        RefreshTasks: Odswiez Zadania Po Ukonczeniu Wszystkich
+      CashText: 'Gotowka::0: {0}'
+      GunItem: Tommy Gun
+      VestItem: Kamizelka Kuloodporna
+      BulletItem: Kula
+      RevealerItem: Odkrywca Rol
+      RevealerReady: Odkrywca Rol Gotowy
+      ShopMessage: >-
+        Jestes czlonkiem Mafii! Mozesz kupowac przedmioty podczas spotkan. Aby kupic przedmiot, najpierw glosuj na siebie, dopoki ten przedmiot nie zostanie wybrany. Nastepnie pomin glosowanie, aby kontynuowac.
+
+        Glosowanie na JAKIEGOKOLWIEK INNEGO gracza bedzie liczone jako twoj glos na tego gracza, w przeciwnym razie nadal pozostaniesz w trybie sklepu.
+      SelectedItemMessage: Wybrales do kupienia {0}. Zakup tego przedmiotu pozostawi cie z {1} gotowki. Nacisnij przycisk pominiecia glosowania, aby kontynuowac zakup.
+      PurchaseItemMessage: 'Kupiles: {0}. Zostalo ci {1} gotowki.'
+      RoleName: Mafioso
+      Blurb: Zdobywaj gotowke za wykonywanie zadan
+      Description: Mafioso to unikalna rola impostora, ktora nie moze zabijac od razu. Zamiast tego Mafioso musi wykonywac zadania, aby zdobywac gotowke. Podczas spotkan Mafioso moze uzyc swojej gotowki, aby kupic kilka roznych przedmiotow.\n\nTommy Gun - Pozwala Mafioso zabijac (jednorazowy zakup)\n\nKula - Wymagana do uzycia z Tommy Gun\n\nKamizelka Kuloodporna - Daje Mafioso jednorazowa niezniszczalnosc w nastepnej rundzie\n\nOdkrywca Rol - Pozwala Mafioso odkryc role jednego innego gracza\n\nWpisz /o aby zobaczyc, ile kosztuje kazdy przedmiot. Tylko przedmioty, ktore mozesz uzyc/kupic, pojawia sie w sklepie.
+      CanVoteOtherPlayers: Mozesz teraz glosowac normalnie, poniewaz zaglosowales na kogos innego niz ty i nie pominales.
+      CanVoteOtherPlayersOnSkip: Mozesz teraz glosowac normalnie, poniewaz pominales przed wybraniem czegos do kupienia ze sklepu.
+    Mare:
+      RoleName: Mare
+      Description: 'Mare zyskuje specjalne moce podczas niektorych sabotazy (ustalane przez hosta). Te moce moga obejmowac: Zwiekszona predkosc i skrocony czas odnowienia zabojstwa.\n\nBadz ostrozny! Jesli wlaczone w ustawieniach, twoj nick bedzie fioletowy, gdy twoja umiejetnosc bedzie aktywna.'
+      Blurb: Sabotuj Aby Uwolnic Swoje Moce
+      Options:
+        SpeedDuringSabotage: Modyfikator Predkosci Podczas Sabotazu
+        KillWithoutSabotage: Moze Zabijac Bez Sabotazu
+        KillCooldown: Normalne Odnowienie Zabojstwa
+        ColoredName: Kolorowy Nick Podczas Sabotazu
+        SabotageKillCooldown: Odnowienie Zabojstwa Podczas Sabotazu
+        SabotageSettings: Specyficzne Ustawienia Sabotazu
+    Mastermind:
+      RoleName: Mastermind
+      Description: Mastermind oznacza gracza swoim przyciskiem Zabojstwa.\n\nPo pewnym opoznieniu ten gracz otrzyma tekst mowiacy, ze zostal Zmanipulowany, i rozpocznie sie odliczanie. Ten gracz musi zabic innego gracza przed koncem odliczania (uzywajac przycisku Zwierzaka lub Zabojstwa), w przeciwnym razie popelni samobojstwo.\n\nMastermind nie moze zabijac normalnie.
+      Blurb: Manipuluj i Kontroluj Innych
+      Options:
+        ManipulatedPlayerLimit: Limit Zmanipulowanych Graczy
+        ImpostorsCanSeeManipulated: Impostorzy::0 Widza Zmanipulowanych
+        TimeUntilSuicide: Czas Do Samobojstwa
+        ManipulationCooldown: Odnowienie Manipulacji
+        KillerCDAfterManipulate: Odnowienie Zabojstwa Po Manipulacji
+      ManipulatedText: Zmanipulowany
+      KillImploredText: >-
+        <b>MUSISZ</b> Zabic Kogos Za {0}
+
+        (Uzyj przycisku Zabojstwa lub Zwierzaka!)
+      ManipulateButtonText: Manipuluj
+    Miner:
+      RoleName: Miner
+      Description: Uzyj przycisku Zwierzaka, aby teleportowac sie do ostatnio uzytej wentylacji. Zabijaj, uzywaj wentylacji i sabotuj jak kazda inna rola Impostora.
+      Blurb: Uzyj Zwierzaka Aby Teleportowac Sie Do Wentylacji
+      Options:
+        AbilityCooldown: Odnowienie Umiejetnosci Minera
+      ButtonText: Kop
+    Ninja:
+      RoleName: Ninja
+      Description: Uzyj przycisku Zwierzaka lub Zmiany Ksztaltu (w zaleznosci od ustawien hosta), aby przelaczac sie miedzy trybem Polowania a Zabijania.\n\nW trybie Polowania uzyj przycisku Zabojstwa, aby oznaczyc cel, a nastepnie uzyj przycisku Zwierzaka (lub powroc do wlasnej formy), aby teleportowac gracza do ciebie (lub ciebie do gracza, w zaleznosci od ustawien) i wykonac zabojstwo.
+      Blurb: Dyskretnie Zabijaj Swoje Ofiary
+      Options:
+        TeleportToNinja: Gracze Teleportuja Sie Do Ninjy
+        AbilityActiviation: Aktywacja Umiejetnosci Ninjy
+      HuntButtonText: Poluj
+    Phantom:
+      RoleName: Phantom
+      Description: Phantom moze stac sie niewidzialny na pewien czas. Bedac niewidzialnym, moze uzywac wentylacji, ale nie moze zabijac. To jest zwykla rola Impostora.
+      Blurb: Stan Sie Niewidzialny
+      Options:
+        VanishCooldown: Odnowienie Znikniecia
+        VanishDuration: Czas Trwania Znikniecia
+        ImmuneToRangedInteractions: Odporny na Interakcje Zdalne
+        RemainingTaskWarning: Ostrzezenie O Pozostalych Zadaniach
+        RemainingTaskTargetable: Pozostale Zadania Do Namierzenia
+    PickPocket:
+      RoleName: Pickpocket
+      Description: Pickpocket to Impostor, ktory zdobywa dodatkowy glos za kazdego zabitego gracza. Te glosy sumuja sie i moga sprawic, ze Pickpocket stanie sie bardzo potezny.
+      Blurb: Kradnij Glosy Od Swoich Ofiar
+      Options:
+        MaximumAdditionalVotes: Maksymalna Liczba Dodatkowych Glosow
+        ResetVotesAfterMeeting: Resetuj Glosy Po Spotkaniach
+    Puppeteer:
+      RoleName: Puppeteer
+      Description: Uzyj przycisku Zabojstwa obok gracza, aby przejac nad nim kontrole. Kontrolowany gracz zostanie wtedy zmuszony do zabicia nastepnego gracza nie bedacego Impostorem, do ktorego sie zblizy.\n\nJesli zabity gracz ma umiejetnosc, ktora aktywuje sie po smierci, efekt spadnie na kontrolowanego gracza zamiast na Puppeteera. Puppeteer nie moze zabijac normalnie.
+      Blurb: Uzywaj Graczy Jako Swoich Kukielek
+      ButtonText: Kukielka
+      Options:
+        PuppetCooldown: Odnowienie Kukielki
+        KillerCDAfterPuppet: Odnowienie Zabojstwa Po Kukielce
+    SerialKiller:
+      RoleName: Serial Killer
+      Description: >-
+        Serial Killer ma znacznie skrocony czas odnowienia zabojstwa (ustalany przez hosta), jednak ma rowniez licznik czasu obok swojego nicku. Za kazdym razem, gdy Serial Killer zabije, licznik sie zresetuje. Jesli licznik osiagnie 0, Serial Killer zginie.
+
+
+        Uwaga: Jesli 'Licznik Zaczyna Sie Po Pierwszym Zabojstwie' jest wylaczone, to Licznik Samobojstwa zostanie wydluzony o te sama wartosc co 'Odnowienie Pierwszego Zabojstwa' w Opcjach Rozgrywki.
+      Blurb: Zabijaj Szybko Aby Przezyc
+      Options:
+        TimeUntilSuicide: Czas Do Samobojstwa
+        TimerAfterFirstKill: Licznik Zaczyna Sie Po Pierwszym Zabojstwie
+    Shapeshifter:
+      RoleName: Shapeshifter
+      Description: Shapeshifter moze zmienic sie w dowolnego gracza, ktory wciaz zyl pod koniec ostatniego spotkania. To jest zwykla rola Impostora.
+      Blurb: Zmien Swoj Wyglad
+      Options:
+        ShapeshiftCooldown: Odnowienie Zmiany Ksztaltu
+        ShapeshiftDuration: Czas Trwania Zmiany Ksztaltu
+    Sniper:
+      RoleName: Sniper
+      Description: Uzyj przycisku Zmiany Ksztaltu, aby zmienic sie w innego gracza. Zrob 1-2 kroki w kierunku, w ktorym chcesz strzelic. Odmien sie, aby oddac strzal. Wystrzelisz kule w tym kierunku i zabijesz graczy na linii strzalu. Sniper nie moze zabijac normalnie, dopoki nie skoncza mu sie kule.
+      Blurb: Zabijaj Z Duzej Odleglosci
+      Options:
+        SniperBulletCount: Liczba Kul Snipera
+        SnipingCooldown: Odnowienie Strzalu
+        RefundBulletOnKill: Zwrot Kuli Po Zabojstwie
+        PreciseShooting: Precyzyjne Strzelanie
+        PlayerPiercing: Przebijanie Graczy
+      ButtonText: Celuj
+    Swooper:
+      RoleName: Swooper
+      Description: Swooper moze stac sie niewidzialny, wskakujac do wentylacji. Bedac niewidzialnym, Swooper moze robic wszystkie normalne rzeczy (zabijac, sabotowac, uzywac wentylacji).\n\nBadz ostrozny! W zaleznosci od ustawien hosta mozesz zostac ujawniony podczas zabijania innego gracza.
+      Blurb: Wejdz Do Wentylacji Aby Stac Sie Niewidzialnym
+      Options:
+        InvisibilityCooldown: Odnowienie Niewidzialnosci
+        SwoopingDuration: Czas Trwania Niewidzialnosci
+        SeenByAllies: Moze Byc Widziany Przez Sojusznikow
+        VentDuringCooldown: Moze Wchodzic Do Wentylacji Podczas Odnowienia
+        InvisibleOnKill: Pozostan Niewidzialny Po Zabojstwie
+        ReturnLocation: Miejsce Powrotu Po Zakonczeniu Niewidzialnosci
+        CurrentLocation: Obecne
+        StartLocation: Poczatkowe
+      ButtonText: Pikuj
+    TimeThief:
+      RoleName: Time Thief
+      Description: Za kazde zabojstwo zdobyte przez Time Thiefa, calkowity czas spotkania zostanie skrocony o pewna wartosc.\n\nW zaleznosci od ustawien hosta, czas spotkania moze zostac przywrocony do normy po smierci Time Thiefa.
+      Blurb: Kradnij Czas Ze Spotkan
+      Options:
+        MeetingTimeStolen: Skradziony Czas Spotkania
+        MinVotingTime: Minimalny Czas Glosowania
+        ReturnTimeAfterDeath: Zwroc Skradziony Czas Po Smierci
+    Vampire:
+      RoleName: Vampire
+      Description: Vampire gryzie swoje cele, co skutkuje opoznionym zabojstwem. Ugryziony gracz umrze po kilku sekundach lub gdy zostanie zwolane nastepne spotkanie. Jesli Vampire ugryzie Baita, Vampire sam zglosi cialo po opoznieniu zabojstwa.
+      Blurb: Opoznione Zabojstwa
+      Options:
+        KillDelay: Opoznienie Zabojstwa
+      ButtonText: Ugryz
+    Vampiress:
+      RoleName: Vampiress
+      Description: Podobnie jak Vampire, Vampiress moze gryzc graczy, ktorzy nastepnie umra po pewnym czasie (ustalonym przez hosta), jednakze moze rowniez dokonywac bezposrednich zabojstw jak zwykli impostorzy. Uzyj przycisku Zwierzaka, aby przelaczac miedzy Ugryzieniami a Zabojstwami. Vampiress to ukryta rola, ktora czasami moze pojawic sie *zamiast* Vampire'a.
+      Blurb: Opoznione i Normalne Zabojstwa
+    Warlock:
+      RoleName: Warlock
+      Description: Uzyj przycisku Zabojstwa, aby przeklac gracza. Gdy Warlock nastepnym razem zmieni ksztalt, przeklety gracz zabije najblizsza mu osobe.\n\nWarlock moze zabijac normalnie, gdy jest w zmienionym ksztalcie. Jesli opcja jest wlaczona, przekleci gracze zabija losowego gracza natychmiast po przekleciu.\n\nBadz Ostrozny! Przekleci gracze moga zabijac Impostorow (a nawet samego Warlocka!).
+      Blurb: Przeklinaj Graczy i Zmuszaj Ich Do Zabijania Innych
+      Options:
+        CursedKillImmediately: Przekleci Gracze Zabijaja Natychmiast
+        LimitedCurseKillRange: Ograniczony Zasieg Zabojstwa Z Klatwy
+      ButtonText: Przeklnij
+    Witch:
+      RoleName: Witch
+      Description: Przycisk Zabojstwa/Klatwy (Hex) Witch przelacza miedzy rzucaniem klatwy a zabijaniem graczy.\n\nGracze, na ktorych Witch rzucila klatwe, beda widoczni z krzyzykiem obok swojego nicku podczas spotkania. Jesli Witch nie zostanie wyrzucona podczas tego spotkania, przeklety gracz umiera.\n\nNormalne zabojstwo Baita automatycznie zglasza cialo.\nRzucenie klatwy na Baita nie zglasza automatycznie ciala.
+      Blurb: Zabijaj i Rzucaj Klatwy Na Graczy
+      Options:
+        FreelySwitchModes: Swobodnie Przelaczaj Tryby
+        SwitchModesAfterAttack: Zmien Tryb Po Ataku
+      CursedMessage: '{0}::0 rzucil(a) klatwe na {1}::1, ktory umrze na koniec nastepnego spotkania.'
+      CursingModeText: Rzucanie Klatwy
+      KillingModeText: Zabijanie
+      HexedCauseOfDeath: Przeklety
+      CursedStatusDescription: Rzucono na ciebie klatwe. Przekleci gracze umra po spotkaniu, chyba ze zrodlo klatwy (Witch) zostanie wyrzucone.
+      CursingButtonText: Klatwa
+      KillButtonText: Zabij
+    YinYanger:
+      RoleName: Yin Yanger
+      Description: Yin Yanger to Impostor ze zdolnoscia zmuszenia dwoch graczy do zabicia sie nawzajem. Uzyj przycisku Zabojstwa, aby oznaczyc dwoch graczy. Gdy znajda sie w zasiegu zabojstwa, zabija sie nawzajem.\n\nYin Yanger moze rowniez zabijac normalnie po oznaczeniu 2 celow.
+      Blurb: Zwracaj Graczy Przeciwko Sobie
+      Options:
+        YinYangCooldown: Odnowienie Yin Yang
+    CrewPostor:
+      RoleName: Crewpostor
+      Description: Wykonaj zadanie, aby natychmiast zabic gracza znajdujacego sie najblizej ciebie (nawet impostorow i inne role zabijajace). Crewpostor wygrywa z Impostorami.
+      Blurb: Rob Zadania Aby Zabijac Ludzi
+      Options:
+        CanKillAllies: Moze Zabijac Sojusznikow
+        WarpToTarget: Teleportacja Do Celu
+        RefreshTasks: Odswiez Zadania Po Ukonczeniu Wszystkich
+    MadGuardian:
+      RoleName: Mad Guardian
+      Description: Mad Guardian to Crewmate sprzymierzony z Impostorami, ktory po ukonczeniu wszystkich swoich zadan staje sie odporny na zabojstwa.\n\nMad Guardian nie wie, kim sa Impostorzy, a Impostorzy nie potrafia odroznic go od innych Crewmate'ow.
+      Blurb: Skoncz Zadania Aby Stac Sie Niezabijalnym
+    MadSnitch:
+      RoleName: Mad Snitch
+      Description: Mad Snitch to Crewmate sprzymierzony z Impostorami, ktory po ukonczeniu wszystkich swoich zadan bedzie w stanie zobaczyc, kim sa Impostorzy, aby moc pomoc zdjac z nich podejrzenia.\n\nImpostorzy nie potrafia odroznic Mad Snitcha od innych Crewmate'ow.
+      Blurb: Skoncz Zadania Aby Zobaczyc Impostorow
+    Madmate:
+      RoleName: Madmate
+      Description: Madmate to Crewmate sprzymierzony z Impostorami. Nie moze zabijac ani nie ma zadnych zadan.\n\nNie wie, kim sa Impostorzy, a Impostorzy nie potrafia odroznic go od innych Crewmate'ow.\n\nJego jedynym zadaniem jest proba ustalenia, kim sa Impostorzy i zdjecie z nich podejrzen.
+      Blurb: Zdradz Crewmate'ow
+    Parasite:
+      RoleName: Parasite
+      Description: Parasite to zabojca sprzymierzony z Impostorami, ktory moze zabijac, ale nie wie, kim sa Impostorzy, i vice versa.\n\nParasite moze robic wszystko to, co potrafi Shapeshifter, i musi wspolpracowac z Impostorami, aby wygrac razem z nimi.
+      Blurb: Wspolpracuj z Impostorami, aby wygrac.
+      Alchemist:
+      RoleName: Alchemist
+      Blurb: Zbieraj Skladniki Aby Tworzyc Idealne Mikstury
+      Description: >
+        Alchemist to uniwersalna rola crewmate'a, ktora zbiera "skladniki". Skladniki mozna znalezc w nastepujacy sposob:
+          • Catalyst - Znaleziony po ukonczeniu zadan
+          • Essence of Sight - Znaleziony podczas naprawy swiatel
+          • Fragment of Discussions - Znaleziony losowo w grupach 3 lub wiecej graczy
+          • Shifting Rose - Znaleziony po zmianie ksztaltu przez gracza
+          • Theta Rift - Znaleziony losowo
+          • Vial of Decay - Znaleziony przy martwych cialach
+        Alchemist moze uzyc przycisku zwierzaka, aby podniesc te skladniki, i otrzyma wiadomosc pod swoim nickiem mowiaca: "Znaleziono: [Nazwa Skladnika]".
+
+        Alchemist uzywa skladnikow do warzenia mikstur. Aby przejsc w "tryb warzenia", Alchemist musi przytrzymac przycisk zwierzaka. Po wejsciu w tryb warzenia, przycisk zwierzaka moze posluzyc do zmiany kolejnej tworzonej mikstury.
+
+        Bedac w menu warzenia, Alchemist moze przytrzymac przycisk zwierzaka, aby z niego wyjsc. Jesli Alchemist ma wszystkie potrzebne skladniki do stworzenia wybranej mikstury, mikstura zacznie sie tworzyc podczas przytrzymywania przycisku zwierzaka.
+
+        Gdy Alchemist ma juz miksture, moze przytrzymac przycisk zwierzaka, aby jej uzyc i ja zuzyc.
+      Ingredients:
+        Catalyst: Catalyst
+        Chaos: Theta Rift
+        Death: Vial of Decay
+        Purity: Shifting Rose
+        Sight: Essence of Sight
+        Tinkering: Fragment of Discussions
+      CraftingPotionText: 'Warzenie:'
+      Potions:
+        Death: Potion of Death
+        Protection: Castling Brew
+        Random: Unstable Concoction
+        Revealing: Serene Grace
+        Sabotage: Mechanic's Mix
+        Sight: Potion of Sight
+        Teleportation: Warp Potion
+        Voting: Leader Potion
+      FoundIngredientText: 'Znaleziono:'
+    Altruist:
+      RoleName: Altruist
+      Description: Zglos cialo, aby wskrzesic gracza kosztem wlasnego zycia. W zaleznosci od ustawien, wskrzeszenie moze byc opoznione. Jesli w tym czasie zostanie zwolane spotkanie, wskrzeszenie zostaje anulowane i nic sie nie dzieje.
+      Blurb: Wskrzeszaj Graczy
+      Options:
+        ReviveDelay: Opoznienie Wskrzeszenia
+        InstantText: Natychmiastowe
+        KillerArrow: Zabojca Dostaje Strzalke Do Wskrzeszonego Gracza
+        PortableVitals: Posiada Przenosne Witalne
+      ButtonText: Wskrzesz
+    Bastion:
+      RoleName: Bastion
+      Description: Uzyj przycisku Wentylacji, aby podlozyc bombe w tej wentylacji. Zabije to nastepnego gracza, ktory jej uzyje. Bomby dzialaja tylko przez jedna runde, a wentylacje zostana zresetowane po kazdym spotkaniu.\n\nBadz ostrozny! Bastion moze wysadzic samego siebie, uzywajac wentylacji, w ktorej wczesniej podlozyl bombe.
+      Blurb: Bombarduj Wentylacje
+      Options:
+        PlantBombCooldown: Odnowienie Podlozenia Bomby
+        BombsPerRound: Bomby na Runde
+      ButtonText: Bomba
+    Bodyguard:
+      RoleName: Bodyguard
+      Description: >-
+        Jako Bodyguard musisz wybrac gracza, ktorego chcesz chronic.
+
+
+        Bodyguard musi wybrac gracza, glosujac na niego podczas spotkania (nie bedzie to liczone jako glos). Gdy cel Bodyguarda zostanie zaatakowany, atakujacy ginie razem z Bodyguardem, a ich cel pozostanie przy zyciu.
+
+
+        Po zaglosowaniu na swoj cel, Bodyguard moze swobodnie glosowac lub pominac.
+
+
+        Uwaga: Po tym jak Bodyguard ochroni swoj cel, obok chronionego gracza pojawia sie 2 ciala (Bodyguarda i atakujacego).
+      Blurb: Poswieca Zycie Aby Chronic Innego
+      ProtectingMessage: 'Obecnie chronisz:'
+      VotePlayerInfo: Zaglosuj, aby wybrac gracza do ochrony.
+      Options:
+        BeneficialInteractionProtection: Chron przed Pozytywnymi::0 Interakcjami
+        NeutralInteractionProtection: Chron przed Neutralnymi::0 Interakcjami
+      BodyguardHelpMessage: 'Jestes Bodyguardem! Twoj obowiazek: chronic niewinnych! Zaglosuj na gracza, aby go chronic w nastepnej rundzie! Alternatywnie, mozesz pominac, aby wrocic do normalnego glosowania.'
+    Chameleon:
+      RoleName: Chameleon
+      Description: Chameleon moze wejsc do wentylacji, aby tymczasowo stac sie niewidzialnym.\n\nJego odliczanie do niewidzialnosci jest wyswietlane pod nickiem i pojawi sie ponownie po pewnym czasie.
+      Blurb: Zakamufluj Sie Z Otoczeniem
+      Options:
+        InvisibilityDuration: Czas Trwania Niewidzialnosci
+        InvisibilityCooldown: Odnowienie Niewidzialnosci
+      HiddenText: Ukryty::0 {0}
+      TimesInvisibleStatistic: Czas Niewidzialnosci
+      ButtonText: Ukryj
+    Charmer:
+      RoleName: Charmer
+      Description: >-
+        Charmer moze uzyc przycisku Zwierzaka/Zabojstwa, aby oczarowac Impostorow lub Neutralnych Zabojcow, by dolaczyli do druzyny Crewmate'ow.
+
+
+        Oczarowani gracze beda wiedziec, ze zostali oczarowani, i straca mozliwosc zabijania innych graczy.
+
+
+        Jesli Charmer sprobuje oczarowac Crewmate'a, proces sie nie powiedzie i Charmer ginie.
+
+
+        Uwaga: Jesli Charmer ma ustawiona aktywacje umiejetnosci za pomoca przycisku Zwierzaka, host moze wymagac wykonania zadan przed mozliwoscia aktywacji umiejetnosci. Ta opcja nie jest dostepna, jesli "Przycisk Umiejetnosci" jest ustawiony na Przycisk Zabojstwa.
+      Blurb: Oczaruj Wrogow Aby Dolaczyli Do Twojej Druzyny
+      Options:
+        AbilityButton: Przycisk Umiejetnosci
+        KillButton: Przycisk Zabojstwa
+        PetButton: Przycisk Zwierzaka
+        TasksPerAbility: Zadania Wymagane Do Naladowania Umiejetnosci
+        CharmingCooldown: Odnowienie Oczarowania
+        CharmedPlayersWinWithCrew: Oczarowani Gracze Wygrywaja Z Crewmate'ami
+        BreakCharmOnDeath: Zdejmij Urok Po Smierci Charmera::0
+        MaxCharmedPlayers: Maksymalna Liczba Oczarowanych Graczy
+      CharmedText: Oczarowany
+      CharmedStatistic: Oczarowani Gracze
+      CharmedDescription: Zostales Oczarowany. Dopoki jestes oczarowany, nie mozesz zabijac Crewmate'ow i jestes uznawany za ich sojusznika.
+      ButtonText: Oczaruj
+    Crewmate:
+      RoleName: Crewmate
+      Description: Normalny, zwykly Crewmate. Wygraj, konczac wszystkie swoje zadania ze swoimi towarzyszami crewmate'ami, lub bedac ostatnia przetrwala frakcja.
+      Blurb: Znajdz Impostorow i Skoncz Zadania
+      Options:
+        OverrideRoleTasks: Nadpisz Zadania Dla {0}
+        AllowCommonTasks: Zezwol Na Wspolne Zadania
+        CustomLongTasks: '{0} Dluzsze Zadania'
+        CustomShortTasks: '{0} Krotsze Zadania'
+    Crusader:
+      RoleName: Crusader
+      Description: Uzyj przycisku Zabojstwa, aby wybrac cel.\n\nTen cel bedzie chroniony przed atakami, a ty automatycznie zabijesz kazdego, kto wejdzie w interakcje z twoim celem.
+      Blurb: Chron Graczy Przed Atakami
+      Options:
+        BeneficialInteractionProtection: Chron przed Pozytywnymi::0 Interakcjami
+        NeutralInteractionProtection: Chron przed Neutralnymi::0 Interakcjami
+      ButtonText: Chron
+    Demolitionist:
+      RoleName: Demolitionist
+      Description: Gdy Demolitionist zostanie zabity, bombarduje ziemie, dajac zabojcy kilka sekund na znalezienie wentylacji. Jesli zabojca nie wejdzie do wentylacji na czas, zostanie wysadzony.\n\nZabojca jest powiadamiany o zabiciu Demolitionista za pomoca tekstu nad jego nickiem.
+      Blurb: Wysadz Swojego Zabojce
+      YouKilledDemoMessage: Zabiles {0}! Wejdz do wentylacji, aby przezyc!
+    Dictator:
+      RoleName: Dictator
+      Description: >-
+        Trzy rzeczy dzieja sie, gdy Dictator glosuje na kogos podczas spotkania:
+
+
+        1. Silowo konczy spotkanie.
+
+        2. Gracz, na ktorego zaglosowal, zostaje wyrzucony.
+
+        3. Poswieca siebie (ginie), jesli nie ma juz zadnych glosow dyktatorskich.
+
+
+        Uwaga: Nic sie nie dzieje, jesli Dictator pominie glosowanie.
+      Blurb: Dyktuj Warunki Spotkania
+      Options:
+        NumberOfDictates: Liczba Glosow Dyktatorskich
+        SuicideIfVoteCrewmate: Samobojstwo Jesli Crewmate::0 Zostanie Zgadzony
+        ShowDictatorVoteAtMeetingEnd: Pokaz Glos Dyktatorski Na Koniec Spotkania
+      LynchEventMessage: '{0}::0 zlinczowal(a) {1}::1.'
+      DictateMessage: '{0} zostal(a) wyrzucony(a) przez {1}::0'
+      PlayersEjectedStat: Wyrzuceni Gracze
+    Doctor:
+      RoleName: Doctor
+      Description: Doctor ma przenosny panel witalny, tak jak zwykla rola Scientist. Sprawdzaj go regularnie, aby uzykac przyblizony czas smierci.\n\nPodczas spotkania (oraz po zamknieciu czatu) Doctor moze zobaczyc przyczyne smierci gracza w nawiasach pod jego nickiem.
+      Blurb: Zobacz Jak Zgineli Gracze
+    Engineer:
+      RoleName: Engineer
+      Description: Engineer moze uzywac wentylacji do poruszania sie po mapie. To jest zwykla rola z Among Us.
+      Blurb: Przemieszczaj Sie Przez Wentylacje
+      Options:
+        VentCooldown: Odnowienie Wentylacji
+        VentDuration: Czas Trwania Wentylacji
+    Escort:
+      RoleName: Escort
+      Description: Escort moze uzyc przycisku Zwierzaka, aby zablokowac role innych graczy.\n\nBlokowanie roli zapobiega zabijaniu, zglaszaniu cial, zwolywaniu spotkan, zmianie ksztaltu i wchodzeniu do wentylacji.
+      Blurb: Blokuj Role Graczy
+      Options:
+        RoleblockCooldown: Odnowienie Blokady Roli
+        RoleblockDuration: Czas Trwania Blokady Roli
+    ExConvict:
+      RoleName: Ex-Convict
+      Description: Pierwsze uzycie przycisku Zwierzaka zaznaczy twoja obecna lokalizacje.\n\nPo ustalonym czasie odnowienia mozesz uzyc przycisku Zwierzaka ponownie, aby teleportowac sie z powrotem do zaznaczonej lokalizacji. To spowoduje ponowne ladowanie umiejetnosci oznaczania.
+      Blurb: Przygotuj Lokalizacje, A Nastepnie Ucieknij
+      Options:
+        MarkCooldown: Odnowienie Po Oznaczeniu
+        EscapeCooldown: Odnowienie Po Ucieczce
+        ClearAfterMeeting: Usun Oznaczenie Po Spotkaniu
+    Herbalist:
+      RoleName: Herbalist
+      Description: Uzyj przycisku Zwierzaka, aby zasadzic ziarno na graczu. Po uplywie pewnego czasu "Licznik Rozkwitu" tego gracza wzrosnie.\n\nPo kilkukrotnym rozkwicie tego samego gracza zobaczysz ikone kwiatu pod jego nickiem. Mozesz wtedy uzyc przycisku Zwierzaka, aby odkryc role tego gracza.\n\nJesli nadal bedziesz uzywac przycisku Zwierzaka na tym graczu, bedziesz mogl ujawnic jego role rowniez innym graczom.
+      Blurb: Sadz Nasiona Aby Powoli Zbierac Informacje
+      Options:
+        TimeUntilBloom: Czas Do Rozkwitu
+        BloomsUntilRoleReveal: Rozkwity Do Odkrycia Roli
+        PlantBloomCooldown: Odnowienie Sadzenia Rozkwitu
+        RevealOnBloom: Odkryj Po Rozkwicie
+      BloomsGrownStatistic: Wyhodowane Rozkwity
+      RolesRevealedStatistic: Odkryte Role
+      ButtonText: Zasadz
+    Investigator:
+      RoleName: Investigator
+      Description: >-
+        Uzyj przycisku Zwierzaka, aby zbadac, czy gracz jest dobry czy zly. Nicki zbadanych graczy beda wyswietlac sie na zielono lub czerwono. W ogolnosci czerwony oznacza zlego, a zielony dobrego.
+
+
+        Badz ostrozny, w zaleznosci od ustawien hosta, niektore role sprzymierzone z Crewmate'ami (np. Sheriff) moga wyswietlac sie jako zle!
+
+
+        Gracze z modyfikatorem Rogue beda wyswietlac sie na czerwono tylko wtedy, gdy ustawienie Neutral Killing jest ustawione na Wszystkich (All).
+      Blurb: Badaj Graczy
+      Options:
+        InvestigateCooldown: Odnowienie Badania
+        NeutralKillingRed: Neutralni::1 Zabojcy::2 Sa Czerwoni::0
+        NeutralPassiveRed: Neutralni::1 Pasywni::2 Sa Czerwoni::0
+        MadmateRed: Madmaci::1 Sa Czerwoni::0
+        CrewKillingRed: Zabijajacy Crewmaci::1 Sa Czerwoni::0
+      ButtonText: Zbadaj
+    Mayor:
+      RoleName: Mayor
+      Description: Glos Mayora jest liczony wielokrotnie.\n\nW zaleznosci od ustawien, moga oni zwolywac spotkania alarmowe uzywajac przycisku Zwierzaka.\n\nDodatkowo istnieje opcja, w ktorej Mayor musi ujawnic swoja role, zanim bedzie mogl uzyskac dodatkowe glosy (ujawnienie nastepuje poprzez glosowanie na siebie).
+      Blurb: Twoj Glos Ma Wieksze Znaczenie
+      RevealMessage: Mayor, musisz sie ujawnic, aby zyskac dodatkowe glosy. Obecnie mozesz glosowac normalnie, ale jesli zaglosujesz na siebie, ujawnisz swoja role wszystkim i zyskasz wiecej glosow!
+      Options:
+        MayorReveal: Ujawnienie Dla Glosow
+        MayorAdditionalVotes: Dodatkowe Glosy Mayora
+        PocketMeeting: Kieszonkowe Spotkanie
+        NumberOfUses: Liczba Uzyc
+      MayorRevealTitle: Ujawnienie Mayora
+      MayorRevealMessage: '{0} ujawnil(a) sie jako mayor!'
+      ButtonText: Przycisk
+    Medic:
+      RoleName: Medic
+      Description: Medic moze zaglosowac na gracza, ktorego chce chronic. Ten gracz bedzie chroniony przed atakami, dopoki Medic pozostaje przy zyciu.\n\nGlosowanie na gracza w celu jego ochrony nie liczy sie jako glos, a gdy Medic wybierze gracza do ochrony, bedzie mogl swobodnie glosowac lub pomijac glosowanie.\n\nW zaleznosci od ustawien hosta, Medic moze miec mozliwosc zmiany chronionego gracza podczas kolejnych spotkan.
+      Blurb: Ochron Gracza Tarcza
+      ProtectingMessage: 'Obecnie chronisz: {0}'
+      VotePlayerInfo: Zaglosuj, aby wybrac gracza do ochrony.
+      MedicHelpMessage: Jestes medykiem! Zaglosuj na gracza, ktorego chcesz chronic w nastepnej rundzie! Alternatywnie, mozesz pominac, aby wrocic do normalnego glosowania.
+      SelectedPlayerMessage: Zdecydowales sie chronic {0}. Zaglosuj na nich ponownie, aby potwierdzic swoj wybor, lub pomin, aby wrocic do normalnego glosowania.
+      ReturnToNormalVoting: Teraz chronisz {0}. Twoj nastepny glos dziala normalnie.
+      Options:
+        ChangeGuardedPlayer: Zmien Chronionego Gracza
+        OnDeathValue: Po Smierci
+        MeetingsValue: Spotkania
+        NeverValue: Nigdy
+        CanProtectSamePlayer: Moze Chronic Tego Samego Gracza Dwa Razy Z Rzedu
+      MustSelectNewTarget: Chroniles {0} w poprzedniej rundzie. Musisz wybrac inny cel w tej rundzie
+    Medium:
+      RoleName: Medium
+      Description: Gdy Medium zglosi cialo, otrzyma wiadomosc na czacie spotkania mowiaca mu o roli zabojcy tego ciala.\n\nMedium moze zobaczyc role zabojcy tylko wtedy, gdy sam zglosil cialo.\n\nW zaleznosci od ustawien hosta, moga rowniez widziec strzalke wskazujaca ciala.\n\nPo zgloszeniu ciala, Medium moze miec rowniez mozliwosc rozmowy ze zgloszonym graczem. Na poczatku spotkania, Medium i zgloszony gracz zostana powiadomieni, ze zostali sparowani do wspolnej rozmowy.\n\nMedium moze zadawac pytania, a martwy gracz moze odpowiedziec tylko 'tak' lub 'nie'.
+      Blurb: Odkryj Role Zabojcy Podczas Zglaszania
+      MediumMessage: Zglosiles cialo i po dlugiej dyskusji z jego duchami. Ustaliles, ze rola zabojcy to {0}.
+      Options:
+        HasArrowsToBody: Posiada Strzalki Do Cial
+        CanSeeChatOfReportedPlayer: Moze Rozmawiac z Duchem Zgloszonego Gracza
+        IsClairvoyant: Moze Rozmawiac Ze Zmarlymi
+        ShownToEveryone: Odpowiedzi Sa Pokazywane Wszystkim
+        AmountOfMeditates: Ilosc Medytacji
+      MediumTitle: Medytacja
+      MediumConnection: Mozesz teraz rozmawiac z duchem {0}. Moga oni odpowiadac "tak" lub "nie" na twoje pytania. Zostalo ci {1} medytacji.
+      MediumConnectionGhost: Medium {0} polaczyl sie z toba. Mozesz z nimi rozmawiac, odpowiadajac TYLKO "tak" lub "nie".
+      YesAnswer: tak
+      NoAnswer: nie
+      OutOfMeditates: Skonczyly ci sie medytacje. Twoje polaczenie z duchem zostalo zamkniete.
+      OutOfMeditatesGhost: Twoje polaczenie z Medium zostalo zamkniete. Twoje odpowiedzi nie sa juz slyszane.
+      Mutable:
+        HasArrowstoBodies: Mozesz zobaczyc strzalki, ktore prowadza do cial, gdy umieraja.
+        AmountofMeditates: Mozesz zadac {0} pytan, zanim twoje polaczenie zostanie zamkniete.
+    Mystic:
+      RoleName: Mystic
+      Description: Gdy gracz zostanie zabity, Mystic otrzymuje pojedynczy blysk i alarm. Jest to bardzo podobne do sytuacji, gdy sabotowany jest reaktor.\n\nUzyj tego alarmu, aby oszacowac czas smierci.
+      Blurb: Otrzymuj Powiadomienia Gdy Gracze Gina
+      Options:
+        MysticIsModifier: Mystic to Modyfikator
+        FlashDuration: Czas Trwania Blysku
+        SendAudioAlert: Wyslij Alarm Dzwiekowy
+        RestrictedToCrewmates: Ograniczone Do Crewmate'ow::0
+    Noisemaker:
+      RoleName: Noisemaker
+      Description: Gdy gracz zabije Noisemakera, krotki alarm wizualny i dzwiekowy jest wysylany ze strzalka pokazujaca kierunek jego ciala. To jest zwykla rola z Among Us.
+      Blurb: Wyslij Alarm Po Smierci
+      Options:
+        ImpostorsGetAlert: Impostorzy Dostaja Alarm
+        AlertDuration: Czas Trwania Alarmu
+    Observer:
+      RoleName: Observer
+      Description: Skoncz zadania, aby zyskac wizje. W zaleznosci od opcji hosta, mozesz zyskac male zwiekszenie wizji po ukonczeniu kazdego zadania, lub duze zwiekszenie wizji po ukonczeniu wszystkich zadan.
+      Blurb: Rob Zadania Aby Zwiekszyc Wizje
+      Options:
+        SlowlyGainsVision: Powoli Zyskuje Wizje
+        VisionGain: Zysk Wizji Po Skonczeniu Zadania
+        OverrideVision: Nadpisz Poczatkowa Wizje
+        StartingVision: Modyfikator Poczatkowej Wizji
+        FinalVision: Wizja Po Skonczeniu Zadan
+        LightsImmunity: Odpornosc Na Swiatla Po Ukonczeniu Zadan
+    Oracle:
+      RoleName: Oracle
+      Description: Oracle moze zaglosowac na gracza podczas spotkania, aby wybrac cel (to nie liczy sie jako glos). Gdy Oracle umrze, rola celu jest ujawniana wszystkim.\n\nOracle moze pominac glosowanie normalnie przed wybraniem celu, lub zablokowac swoj cel, a nastepnie glosowac/pomijac swobodnie. Oracle moze wybrac ujawnienie wlasnej roli, glosujac na siebie.
+      Blurb: Ujawnij Role Po Smierci
+      SelectRole: 'Wybrales: {0}'
+      UnselectRole: 'Odznaczyles: {0}'
+      VotePlayerInfo: Zaglosuj, aby wybrac gracza do ujawnienia po twojej smierci. Mozesz ponownie zaglosowac na gracza, aby go odznaczyc.\n\nPo potwierdzeniu, twoj cel nie moze zostac zmieniony.
+      OracleMessageTitle: Umiejetnosc Oracle
+      VoteNormallyMessage: Mozesz teraz glosowac normalnie
+      SkipMessage: Zaglosuj na niego ponownie, aby potwierdzic swoj wybor.
+      RevealMessage: Oracle ujawnil wszystkim, ze {0} to {1}
+    Psychic:
+      RoleName: Psychic
+      Description: Psychic ma zdolnosc widzenia potencjalnie zlych graczy podczas spotkania.\n\nNicki trzech graczy beda podswietlone na czerwono, co najmniej jeden z nich jest zly. Liczba podswietlonych graczy moze byc dostosowana przez hosta.
+      Blurb: Zobacz Potencjalnych Zlych Graczy
+      Options:
+        MaxHighlightedPlayers: Maksymalna Liczba Podswietlonych Graczy
+        AllKillingRolesAreEvil: Wszystkie Zabijajace::0 Role Sa Zle
+    Repairman:
+      RoleName: Repairman
+      Description: Repairman moze samodzielnie i szybko naprawiac sabotaze, ktore zazwyczaj wymagaja dwoch graczy (np. reaktor).\n\nSwiatla moga byc naprawione przez dotkniecie pojedynczej dzwigni. Otwarcie drzwi, ktore mozna otworzyc recznie (np. na Polus), otworzy wszystkie polaczone drzwi.
+      Blurb: Szybko Naprawiaj Sabotaze
+      Options:
+        RepairmanCanVent: Repairman::0 Moze Uzywac Wentylacji
+        FastFixLights: Szybka Naprawa Swiatel
+        FastFixReactor: Szybka Naprawa Reaktora
+        FastFixOxygen: Szybka Naprawa Tlenu
+        FastFixComms: Szybka Naprawa Komunikacji
+        FastFixDoors: Szybka Naprawa Drzwi
+        FastFixHelicopter: Szybka Naprawa Helikoptera
+      RepairmanFixMessage: '{0} naprawil {1}.'
+    Scientist:
+      RoleName: Scientist
+      Description: Scientist ma przenosny monitor witalny, do ktorego mozna uzyskac dostep w dowolnym miejscu na mapie. To jest zwykla rola z Among Us.
+      Blurb: Dostep Do Witalnych W Kazdej Chwili
+      Options:
+        VitalsCooldown: Odnowienie Witalnych
+        VitalsBatteryCharge: Bateria Witalnych
+    Sheriff:
+      RoleName: Sheriff
+      Description: >-
+        Sheriff moze zabijac Impostorow i Neutralnych. Badz Ostrozny! Sheriff popelni samobojstwo (misfire), jesli sprobuje zastrzelic Crewmate'a lub Neutralnego, na ktorego host nie pozwolil.
+
+
+        Uwaga: Jesli "Przycisk Akcji" Sheriffa jest ustawiony na Zabojstwo, Sheriff nie otrzyma zadnych zadan do wykonania.
+      Blurb: Zastrzel Impostorow
+      MisfireStat: Samobojstwa (Misfires)
+      NeutralKillingSetting: Moze Zabijac Neutralnych::0 Zabojcow::1
+      NeutralPassiveSetting: Moze Zabijac Neutralnych::0 Pasywnych::1
+      MadmateSetting: Moze Zabijac Madmate'ow::0
+      Options:
+        SheriffActionButton: Przycisk Akcji Sheriffa
+        OneShotPerRound: Jeden Strzal Na Runde
+        KillOnMisfire: Zabij Cel Przy Samobojstwie
+        KillCooldown: Odnowienie Strzalu
+        TotalShots: Calkowita Liczba Strzalow
+        ActionKillButton: Przycisk Zabojstwa (Przestarzale)
+        ActionPetButton: Przycisk Zwierzaka
+    Snitch:
+      RoleName: Snitch
+      Description: Snitch to Crewmate, ktory musi ukonczyc swoje zadania, aby zobaczyc, kim sa Impostorzy (moze rowniez widziec neutralnych zabojcow w zaleznosci od ustawien).\n\nGdy Snitchowi zostanie okreslona liczba zadan do konca, zostanie ujawniony zabojcom za pomoca wskaznika ⚠.\n\nW zaleznosci od ustawien i momentu zakonczenia zadan, Snitch moze rowniez widziec strzalki wskazujace kierunek kazdego gracza, ktorego sledzi, i vice versa.
+      Blurb: Skoncz Zadania Aby Zobaczyc Zabojcow
+      Options:
+        RemainingTaskWarning: Ostrzezenie O Pozostalych Zadaniach
+        EvilArrowToSnitch: Zli Gracze Maja Strzalke Do Snitcha::0
+        SnitchArrow: Wlacz Strzalke Dla Snitcha::0
+        ColoredArrow: Kolorowa Strzalka
+        SnitchTracksAllKillers: Snitch::0 Moze Sledzic Kazdego Zabojce
+    Speedrunner:
+      RoleName: Speedrunner
+      Description: Speedrunner musi skonczyc zadania, aby zyskac predkosc.\n\nW zaleznosci od ustawien hosta, mozesz zyskac male zwiekszenie predkosci (mozliwe, ze tymczasowe w zaleznosci od ustawien) po ukonczeniu pojedynczych zadan, lub uzyskac duze zwiekszenie predkosci po osiagnieciu progu zadan.
+      Blurb: Koncz Zadania Aby Zyskac Predkosc
+      Options:
+        TempBoostOnTaskFinish: Tymczasowe Przyspieszenie Po Skonczeniu Zadania
+        TempBoostDuration: Czas Trwania Tymczasowego Przyspieszenia
+        PermanentSpeedGain: Stale Zwiekszenie Predkosci Za Zadanie
+        TaskUntilLargeSpeedBoost: Zadania Do Koncowego Zwiekszenia Predkosci
+        FinalSpeedBoost: Koncowa Predkosc
+    Swapper:
+      RoleName: Swapper
+      Description: Pierwszych dwoch graczy, na ktorych zaglosujesz podczas kazdego spotkania, bedzie mialo zamieniona liczbe glosow oddanych przeciwko nim.\n\nPo zaglosowaniu na tych graczy mozesz glosowac normalnie. Alternatywnie, mozesz pominac glosowanie na poczatku i przejsc do normalnego glosowania.\n\nPo wybraniu jednego gracza do zamiany, mozesz zaglosowac na niego ponownie, aby anulowac wybor. Gdy wybierzesz dwoch graczy do zamiany, nie mozesz zmienic swojego wyboru.
+      Blurb: Zamieniaj Glosy Graczy
+      SwapperInfoMessage: >-
+        Jestes Swapperem. Aby zamienic glosy otrzymane przez dwoch graczy, zaglosuj na dwoch roznych graczy.
+
+        Mozesz zmienic pierwsza wybrana osobe, glosujac na nia ponownie.
+
+        Dodatkowo, mozesz pominac te umiejetnosc, od razu pomijajac glosowanie.
+      SwapperSelectMessage1: Wybrales, aby zamienic glosy gracza {0}.
+      SwapperSelectMessage2: Wybrales, aby zamienic glosy gracza {0}. {1} i {0} beda teraz mieli zamienione glosy przeciwko sobie.
+      SwapperUnselectMessage: Odznaczyles {0}.
+      SwapperPublicMessage: Swapper zamienil glosy otrzymane przez {0} i {1}!
+      SwapperAbility: Umiejetnosc Swappera
+      Options:
+        SwapsPerGame: Zamiany::0 Na Gre
+    Tracker:
+      RoleName: Tracker
+      Description: Tracker moze uzyc przycisku Sledzenia na graczu, aby oznaczyc jego lokalizacje i sledzic jego ruchy na swojej mapie.\n\nDodatkowo, Tracker moze uzyc przycisku Zwierzaka, aby ujawnic strzalki wskazujace kierunek wszystkich martwych cial na mapie, jesli ta opcja jest wlaczona przez hosta.
+      Blurb: Sledz Innych Graczy
+      Options:
+        TrackerCooldown: Odnowienie Sledzenia
+        TrackerDuration: Czas Trwania Sledzenia
+        TrackerDelay: Opoznienie Aktualizacji Sledzenia
+    Transporter:
+      RoleName: Transporter
+      Description: Transporter moze uzyc przycisku Zwierzaka, aby zamienic miejscami dwoch losowych graczy.
+      Blurb: Transportuj Graczy
+      Options:
+        TotalTransports: Liczba Transportow
+        TransportCooldown: Odnowienie Transportu
+      ButtonText: Transportuj
+    Trapster:
+      RoleName: Trapster
+      Description: Gdy Trapster zostanie zabity, zabojca zostanie zamrozony w miejscu na ustalony czas.\n\nUwieziony zabojca nie bedzie mogl zglosic ciala, dopoki jest uwieziony.
+      Blurb: Zamroz Impostorow Po Smierci
+      Options:
+        TrapsOnIndirectKills: Pulapki Przy Posrednich Zabojstwach
+        TrappedDuration: Czas Trwania Uwiezienia
+        BlockReportWhileTrapped: Blokuj Zgloszenie Podczas Uwiezienia
+    Veteran:
+      RoleName: Veteran
+      Description: Veteran moze uzyc przycisku Zwierzaka, aby wprowadzic sie w stan 'Alertu'.\n\nGdy gracz wejdzie w interakcje z Veteranem, gdy ten jest w staniem Alertu, atak zostanie odbity, co doprowadzi do smierci atakujacego.
+      Blurb: Zabijaj Innych W Samoobronie.
+      Options:
+        TotalAlerts: Liczba Alertow
+        AlertCooldown: Odnowienie Alertu
+        AlertDuration: Czas Trwania Alertu
+        KillCrewmates: Zabijaj Crewmate'ow
+        KillWhileTransported: Zabijaj Podczas Transportu
+        KillRangedAttackers: Zabijaj Atakujacych Na Dystans
+      ButtonText: Alert
+    Vigilante:
+      RoleName: Vigilante
+      Blurb: Zgaduj Role Impostorow Aby Zabijac
+      Description: >-
+        Vigilante to Crewmate, ktory moze zabijac Impostorow i Neutralnych, zgadujac ich role. Nie mozesz zgadywac rol Crewmate'ow.
+
+        Podczas spotkania mozesz wybrac gracza, zaglosowawszy na niego. Po glosowaniu Vigilante moze uzyc komendy na czacie (/cmd [nazwaroli]), aby wybrac role do zgadniecia.
+
+        Aby zakonczyc zgadywanie, zaglosuj ponownie na tego gracza, aby potwierdzic wybor. Jesli zgadniecie jest poprawne, zgadywany gracz zginie, w przeciwnym razie Vigilante zginie.
+
+        Aby anulowac zgadywanie, mozesz pominac glosowanie w dowolnym momencie, a twoj nastepny glos bedzie normalny.
+
+        Uwaga: Odkryte role (np. od Oracle) nie moga byc zgadywane.
+      SelectPlayer: 'Wybrales do zabicia:'
+      SelectRole: 'Zgadujesz:'
+      SkipToContinue: Nacisnij "Pomin Glosowanie", aby kontynuowac.
+      VoteRoleInfo: Aby wybrac role, zaglosuj na gracza z ta rola nad jego nickiem. Jesli ma wiele rol, ponowne zaglosowanie na tego gracza wybierze kolejna role.
+    AgiTater:
+      RoleName: AgiTater
+      Description: >-
+        AgiTater moze rozpoczac zabojcza gre w 'goracego ziemniaka'.
+
+
+        Uzyj przycisku Zabojstwa, aby przekazac bombe graczowi, ktory musi podac ja innemu graczowi zanim wybuchnie (moze to nastapic po pewnym czasie lub gdy zostanie zwolane nastepne spotkanie).
+
+
+        Gracze trzymajacy bombe moga ja przekazac przechodzac obok innego gracza, a ktokolwiek ja trzyma, bedzie mial wskaznik tekstowy z napisem 'Trzyma Bombe!'.
+
+
+        Uwaga: Jesli bomba jest ustawiona na wybuch po okreslonym czasie, tekst wskaznika zmieni kolor z zielonego na zolty, a nastepnie na czerwony, zblizajac sie do wybuchu.
+      Blurb: Podaj Bombe (Goracy Ziemniak)
+      Options:
+        PlaceBombCooldown: Odnowienie Podlozenia Bomby
+        ExplodeOnMeetings: Wybuch Na Spotkaniach
+        ExplodeAfterDuration: Wybuch Po Czasie
+        ExplodeDoubleBombed: Wybuch Po Podwojnym Zbombardowaniu
+        BombDuration: Czas Trwania Bomby
+        BombsPerRound: Bomby Na Runde
+        BombTransferRate: Czas Przekazania Bomby
+      PassTheBombText: Podaj Bombe
+      HoldingBombLevel1: Trzyma Bombe!
+      HoldingBombLevel2: Trzyma Bombe!!!
+      HoldingBombLevel3: Trzyma Bombe!!!!!
+      ButtonText: Podaj
+    Amalgamation:
+      RoleName: Amalgamation
+      Description: Za kazdym razem, gdy Amalgamation zglosi cialo, nabywa umiejetnosci tej roli. Warunek zwyciestwa Amalgamation zalezy od pierwszego zgloszonego ciala, pozostale ciala beda nadal wzmacniac Amalgamation. Amalgamation to ukryta rola, ktora czasami moze pojawic sie zamiast Amnesiac.
+      Blurb: Stan sie WSZYSTKIMI rolami
+      Options:
+        WinConditionDeterminer: Determinant Warunku Zwyciestwa
+        OldestRoleValue: Najstarsza Rola
+        NewestRoleValue: Najnowsza Rola
+        MaxAbsorbedRoles: Max Wchlonietych Rol
+        AbsorbModifiers: Wchlon Modyfikatory
+    Amnesiac:
+      RoleName: Amnesiac
+      Description: >-
+        Gdy Amnesiac po raz pierwszy zglosi cialo, dolaczy do druzyny martwego gracza. Jesli wlaczone, Amnesiac zamiast tego ukradnie dokladna role tego gracza.
+
+
+        Jesli Amnesiac zglosi --> Zmienia sie w:
+
+        Neutralny Zabojca --> Hitman
+
+        Neutralny Pasywny --> Opportunist
+
+        Crewmate --> Sheriff
+
+        Inne --> Jester
+      Blurb: Zglos Cialo i Dolacz Do Ich Druzyny
+      Options:
+        StealsExactRole: Kradnie Dokladna Role
+        HasArrowsToBody: Posiada Strzalki Do Cial
+      ButtonText: Przypomnij
+    Archangel:
+      RoleName: Archangel
+      Description: Archangel otrzymuje cel na poczatku gry w postaci wskaznika tekstowego pod nickiem. Moga uzyc przycisku Zwierzaka, aby tymczasowo chronic swoj cel przed pewnymi rodzajami interakcji, w zaleznosci od ustawien hosta.\n\nArchangel wygrywa, jesli jego cel wygra (nawet jesli Archangel nie zyje).\n\nJesli cel zginie, Archangel moze zmienic role (w zaleznosci od ustawien hosta), lub moze zachowac swoja role i nadal wygrac, jesli druzyna jego celu wygra (np. cel Crewmate nadal moze wygrac z Crewmate'ami, nawet jesli jest martwy).
+      Blurb: Chron Swoj Cel Przed Smiercia
+      Options:
+        ProtectDuration: Czas Trwania Ochrony
+        ProtectCooldown: Odnowienie Ochrony
+        TargetKnowsArchAngelExists: Cel Wie Ze Ma Archangela
+        ArchAngelKnowsTargetRole: Archangel Zna Role Celu
+        RoleChangeWhenTargetDies: Zmiana Roli Gdy Cel Umiera
+        ShouldCancelWhichInteractions: Powinien Anulowac Nastepujace Interakcje
+        InteractionFormatter: Anuluj Interakcje: {0}
+        Indirect: Posrednie
+        Ranged: Dystansowe
+        Delayed: Opoznione
+        Neutral: Neutralne
+        Fatal: Smiertelne
+        Hostile: Wrogi
+      ButtonText: Chron
+    Arsonist:
+      RoleName: Arsonist
+      Description: Spamuj przyciskiem Zabojstwa bedac obok gracza, aby oblac go benzyna. Gracz jest w pelni oblany, gdy jest oznaczony pelnym pomaranczowym okregiem.\n\nOblej wszystkich graczy i podpal ich uzywajac przycisku Zwierzaka, aby wygrac.
+      Blurb: Oblej i Podpal Wszystkich Graczy Aby Wygrac
+      Options:
+        AttacksToCompleteDouse: Ataki Do Pelnego Oblania
+        CanIgniteAnytime: Moze Podpalac W Dowolnym Momencie
+        DouseCooldown: Odnowienie Oblania
+        IgniteCooldown: Odnowienie Podpalenia
+        ShareSameCooldown: Nie Moze Oblac/Podpalic gdy Drugie sie Odnawia
+      IncineratedDeathName: Spalony
+      DouseEventMessage: '{0} oblal(a) {1}.'
+      PressIgniteToWinMessage: Nacisnij Podpal Aby Wygrac
+      DousedPlayerStatistic: Oblani Gracze
+      IncineratedPlayerStatistic: Spaleni Gracze
+      ButtonText: Oblej
+      IgniteButtonText: Podpal
+    BloodKnight:
+      RoleName: Blood Knight
+      Description: Blood Knight to neutralny zabojca, ktory za kazdym razem gdy zabije gracza, jest chroniony przed atakami na kilka sekund.
+      Blurb: Zyskaj Tarcze Za Kazde Zabojstwo
+      Options:
+        ProtectDuration: Czas Trwania Ochrony
+    Copycat:
+      RoleName: Copycat
+      Description: Jako Copycat, po pierwszym ataku na ciebie zmienisz frakcje i role. Jesli zaatakowal cie impostor, jestes teraz impostorem. Jesli solo zabojca, to tez stajesz sie solo zabojca. W zaleznosci od ustawien hosta, mozesz rowniez zyskac ich "postep".
+      Blurb: Zostan Pomocnikiem Swojego Zabojcy
+      Options:
+        KillerKnowsCopycat: Zabojca Zna Copycata::0
+        CopyRoleProgress: Kopiuj Postep Roli
+      CopyCatFactionChangeName: '{0}cat'
+    Deathknight:
+      RoleName: Deathknight
+      Description: Deathknight to Poboczna Rola Necromancera, ktory musi pomagac w konwertowaniu graczy na Undead.\nDeathknight musi rozpoczac konwersje uzywajac przycisku zwierzaka na graczu, po czym Necromancer musi dokonczyc konwersje uzywajac przycisku zabojstwa na tym samym graczu. Mozesz zobaczyc status konwersji poprzez okrag obok nicku.\nMoze byc tylko jeden Deathknight naraz, a jesli Necromancer umrze, Deathknight zostanie nowym Necromancerem.\n\nDeathknight jest przydzielany jako pierwsza osoba skonwertowana przez Necromancera.
+      Blurb: Pomagaj Konwertowac Role Na Undead
+      Options:
+        CanBecomeNecromancer: Moze Zostac Necromancerem
+        InfluenceCooldown: Odnowienie Wplywu
+        InfluenceRange: Zasieg Wplywu
+        InfluenceMany: Wplywaj Na Wielu
+      ButtonText: Konwertuj
+    Demon:
+      RoleName: Demon
+      Description: Gdy w grze jest Demon, wszyscy gracze pojawiaja sie z zielonym paskiem zdrowia nad glowami (widocznym tylko dla Demona).\n\nGdy Demon zaatakuje gracza, jego pasek zdrowia spadnie o kilka punktow. Po calkowitym zredukowaniu paska zdrowia gracza, ten gracz ginie.\n\nGdy Demon zostanie zaatakowany, jego pasek zdrowia rowniez spada. Demon moze nieznacznie leczyc sie poprzez zabijanie graczy.
+      Blurb: Atakuj Graczy Aby Zmniejszyc Ich Zdrowie
+      Options:
+        AttackCooldown: Odnowienie Ataku
+        DamagePerAttack: Obrazenia Na Atak
+        HealthHealedOnKill: Zdrowie Odzyskiwane Za Zabojstwo
+        DamageTakenOnAttack: Obrazenia Otrzymywane Za Atak
+      ButtonText: Atakuj
+    Egoist:
+      RoleName: Egoist
+      Description: Egoist to neutralny zabojca, ktory widzi kim sa Impostorzy, ale nie moze ich zabic.\n\nJego zadaniem jest zdrada Impostorow i proba wyrzucenia ich w glosowaniu, jednoczesnie zabijajac innych graczy, aby odniesc solo zwyciestwo. Impostorzy moga zabijac, ale nie widza, ze w grze jest Egoist.
+      Blurb: Zabij Wszystkich i Wyrzuc Impostorow
+      Options:
+        IsShapeshifter: Egoist Jest Zmiennoksztaltnym
+    Executioner:
+      RoleName: Executioner
+      Description: Executioner otrzymuje cel na poczatku gry. Cel jest oznaczony kolorowym nickiem (w tym samym kolorze co Executioner), a Executioner wygra, jesli jego cel zostanie wyrzucony w glosowaniu.\n\nJesli cel umrze przed wyrzuceniem, Executioner zmienia swoja Role i staje sie Crewmate'em, Jesterem lub Opportunistem zgodnie z ustawieniami hosta. Jesli celem jest Jester, Executioner moze byc dodatkowym zwyciezca.
+      Blurb: Spraw Aby Cel Zostal Wyrzucony Aby Wygrac
+      Options:
+        TargetImpostors: Moze Celowac W Impostorow
+        TargetNeutrals: Moze Celowac W Neutralnych
+        RoleChange: Zmiana Roli Gdy Cel Umrze
+    Glitch:
+      RoleName: The Glitch
+      Description: Uzyj przycisku Zabojstwa, aby zablokowac role lub zabic graczy. Przycisk Zwierzaka sluzy do przelaczania miedzy hakowaniem (blokowaniem roli) a zabijaniem.\n\nHakowanie gracza zapobiega zabijaniu, zglaszaniu cial, zwolywaniu spotkan, zmianie ksztaltu i wchodzeniu do wentylacji.
+      Blurb: Blokuj Role i Zabijaj Graczy
+      ModeHacking: Hakowanie
+      ModeKilling: Zabijanie
+      Glitch:
+        Options:
+          HackingDuration: Czas Trwania Hakowania
+    Hacker:
+      RoleName: Hacker
+      Description: Hacker musi naprawiac sabotaze, aby zdobywac punkty. Kazda naprawa sabotazu to jeden punkt, a Hacker potrzebuje okreslonej liczby punktow (ustalanej przez hosta) do wygranej. Podobnie jak Repairman, Hacker moze naprawiac sabotaze szybciej i w pojedynke.
+      Blurb: Naprawiaj Sabotaze Aby Wygrac
+      Options:
+        HackerSabotagePointAmount: Punkty Wymagane Do Wygranej
+        FixingDoorsGivesPoints: Naprawa Drzwi Daje Punkty
+        HackerCanVent: Hacker::0 Moze Uzywac Wentylacji
+    Harbinger:
+      RoleName: Harbinger
+      Options:
+        TasksPerRitualCircle: Zadania Na Krag Rytualny
+        RitualCirclesUntilWin: Kregi Rytualne Do Wygranej
+      Blurb: <Roles.Harbinger.Blurb>
+    Hitman:
+      RoleName: Hitman
+      Description: Przezyj! Hitman to neutralny Zabojca, ktory moze wygrac z wiekszoscia druzyn, o ile bedzie zyl pod koniec gry.\n\nHost moze wybrac, czy Hitman wygrywa z Executionerem/Jesterem.
+      Blurb: Zabijaj Graczy i Przezyj
+      Options:
+        WinWithAbsolutes: Wygrywa Z Absolutnymi Zwyciezcami
+        Executioner: Executioner
+        Jester: Jester
+    Jackal:
+      RoleName: Jackal
+      Description: Jackal moze zabic kazdego, w tym Impostorow. Musi byc ostatnim zywym graczem, aby wygrac.
+      Blurb: Zabij Wszystkich
+      Options:
+        CanRecruit: Moze Rekrutowac
+        OnNonCrewRecruit: Po Zrekrutowaniu Nie-Crewmate'a
+        KillsUntilRecruit: Zabojstwa Do Rekrutacji
+        SidekickBecomesJackal: Sidekick Staje Sie Jackalem Po Smierci Jackala
+        NewJackalCanRecruit: Nowy Jackal Moze Rekrutowac
+      NextKillIsRecruit: >-
+        <size=1.5>Masz wystarczajaco zabojstw do Rekrutacji.
+
+        Twoje nastepne zabojstwo zrekrutuje tego gracza.</size>
+      Recruit: Rekrutuj
+    Jester:
+      RoleName: Jester
+      Description: Jester musi zostac wyrzucony w glosowaniu, aby wygrac. Jesli Jester zostanie wyrzucony, gra natychmiast konczy sie jego zwyciestwem.\n\nW zaleznosci od ustawien hosta, Jester moze nie miec mozliwosci zwolywania spotkan, lub moze potrzebowac minimalnej liczby spotkan przed mozliwoscia wygranej.
+      Blurb: Zostan Wyrzucony W Glosowaniu
+      Options:
+        ImpostorVision: Posiada Wizje Impostora
+        CanUseVents: Moze Uzywac Wentylacji
+        CantCallEmergencyMeetings: Nie Moze Zwolywac Spotkan Alarmowych
+        MeetingsBeforeWinning: Minimalna Liczba Spotkan Przed Mozliwoscia Wygranej
+      WinConditionName: Jester::0 Wygnany
+    Juggernaut:
+      RoleName: Juggernaut
+      Description: Juggernaut zaczyna z wyzszym czasem odnowienia zabojstwa, ale z kazdym zabojstwem ten czas maleje.\n\nMusi zabic wszystkich, wlaczajac Impostorow, i pozostac jako ostatni zywy gracz.
+      Blurb: Zabij Wszystkich i Badz Ostatnim Zywym Graczem
+      Options:
+        CooldownReductionPerKill: Redukcja Odnowienia Na Zabojstwo
+        Marksman:
+      RoleName: Marksman
+      Description: Marksman moze zabijac graczy, aby zyskac wiekszy dystans zabijania. Liczba zabojstw wymagana do zwiekszenia dystansu jest ustalana przez hosta.
+      Blurb: Zdobywaj Zabojstwa Aby Zwiekszyc Dystans Zabijania
+      Options:
+        KillsBeforeIncrease: Zabojstwa Przed Zwiekszeniem Dystansu
+        StartingKillDistance: Poczatkowy Dystans Zabijania
+    Necromancer:
+      RoleName: Necromancer
+      Description: Necromancer to glowny rekruter frakcji Undead. Pierwsza osoba, ktora zrekrutuje (uzyje przycisku Zabojstwa), stanie sie Deathknightem. Z pomoca Deathknighta musza wspolpracowac, aby konwertowac innych na Undead. Necromancer moze konwertowac ludzi uzywajac przycisku zabojstwa na kims, kogo Deathknight juz zaczal konwertowac.\n\nSkonwertowani/czesciowo skonwertowani gracze beda mieli okrag obok swojego nicku. Pelny okrag oznacza pelna konwersje. Jesli sprobujesz skonwertowac gracza, ktory nie jest jeszcze konwertowany przez Deathknighta, zostaniesz zablokowany.
+      Blurb: Konwertuj Role na Undead
+      Options:
+        ConvertCooldown: Odnowienie Konwersji
+        PartialConvertImmunity: Odpornosc na Czesciowo Skonwertowanych
+      ButtonText: Konwertuj
+    Occultist:
+      RoleName: Occultist
+      Description: Przycisk Zabojstwa/Klatwy (Hex) Occultista przelacza miedzy rzucaniem klatwy a zabijaniem graczy.\n\nGracze, na ktorych Occultist rzucil klatwe, beda widoczni z krzyzykiem podczas spotkania. Jesli Occultist nie zostanie wyrzucony podczas tego spotkania, przeklety gracz umiera.\n\nNormalne zabojstwo Baita automatycznie zglasza cialo.\nRzucenie klatwy nie zglasza automatycznie Baita.
+      Blurb: Rzucaj Klatwy i Zabijaj Graczy
+      Options:
+        FreelySwitchModes: Swobodnie Przelaczaj Tryby
+        SwitchModesAfterAttack: Zmien Tryb Po Ataku
+      CursedMessage: '{0}::0 rzucil(a) klatwe na {1}::1, ktory umrze na koniec nastepnego spotkania.'
+      CursingModeText: Rzucanie Klatwy
+      KillingModeText: Zabijanie
+      HexedCauseOfDeath: Przeklety
+      CursedStatusDescription: Rzucono na ciebie klatwe. Przekleci gracze umra po spotkaniu, chyba ze zrodlo klatwy zostanie wyrzucone.
+    Opportunist:
+      RoleName: Opportunist
+      Description: Niezaleznie od wyniku gry, Opportunist wygrywa, jesli przetrwa do konca meczu.
+      Blurb: Pozostan Przy Zyciu Do Konca Gry
+    Pelican:
+      RoleName: Pelican
+      Description: Pelican polyka graczy uzywajac przycisku zabojstwa. Polknieci gracze sa teleportowani poza mape i nie moga wchodzic w interakcje z gra (w tym Sabotaze).\n\nGdy zostanie zwolane spotkanie, wszyscy polknieci gracze natychmiast zgina. Jesli Pelican zginie lub sie rozlaczy, wszyscy polknieci gracze wroca tam, gdzie Pelican byl ostatnio.
+      Blurb: Polykaj Graczy
+      Options:
+        GulpCooldown: Odnowienie Polkniecia
+        AllowEscapeFromPelican: Zezwol Na Ucieczke Od Pelicana
+        SpawnBodiesOnPelican: Zrespawnuj Ciala Na Pelicanie Podczas Spotkania
+      GulpedStatistic: Polknieci Gracze
+      DeathName: Polkniety
+      ButtonText: Polknij
+    Pestilence:
+      RoleName: Pestilence
+      Description: Pestilence to Poboczna Rola Plague Bearera po tym, jak zakazi wszystkich. Pestilence nie moze byc bezposrednio zabity, a kazdy, kto wejdzie z nim w interakcje, zostanie sparowany (zamiast tego zginie).\n\nPestilence moze zostac wyrzucony w glosowaniu lub zabity posrednio (np. przez graczy pod wplywem Warlocka lub Puppeteera).\n\nW zaleznosci od ustawien hosta, inne rodzaje atakow moga rowniez zabic Pestilence, a ataki Pestilence moga byc nieblokowalne.
+      Blurb: Zabij Wszystkich i Wygraj Sam
+      Options:
+        UnblockableKill: Nieblokowalne Zabojstwo
+        InvincibilitySettings: Ustawienia Niesmiertelnosci
+        ImmuneManipulatorAttackers: Odporny Na Zmanipulowanych Atakujacych
+        ImmuneRangedAttacks: Odporny Na Ataki Dystansowe
+        ImmuneDelayedAttacks: Odporny Na Ataki Opoznione
+        ImmuneArsonistIgnite: Odporny Na Podpalenie Arsonista
+      ButtonText: Zabij
+    Pirate:
+      RoleName: Pirate
+      Description: >-
+        Pirate to Neutralny Zgadywacz (Guesser), ktory moze zabijac graczy, zgadujac ich role. Jesli Pirate pomyslnie zgadnie role gracza, gracz ten zostanie wyeliminowany.
+
+        Podczas spotkania mozesz wybrac gracza, ktorego chcesz zgadnac, glosujac na niego. Po glosowaniu mozesz uzyc komendy na czacie (/cmd [nazwaroli]), aby wybrac role, ktora chcesz zgadnac.
+
+        Aby zakonczyc zgadywanie, zaglosuj ponownie na gracza, aby potwierdzic, ze wszystko jest poprawne. Jesli zgadniecie jest poprawne, zgadywany gracz zginie, w przeciwnym razie Pirate zginie.
+
+        Pirate potrzebuje okreslonej liczby zgadniec do wygranej, ustalanej przez hosta. Pirate moze nie zginac przy zlym zgadnieciu w zaleznosci od ustawien hosta, ale nie bedzie mogl zgadywac ponownie do konca rundy.
+
+        Aby anulowac zgadywanie, mozesz pominac glosowanie w dowolnym momencie, a twoj nastepny glos bedzie normalny.
+
+        Uwaga: Odkryte role (np. od Oracle) nie moga byc zgadywane.
+      Blurb: Zgaduj Role Graczy
+      Options:
+        GuessWinAmount: Wymagana Liczba Zgadniec Pirata Do Wygranej
+        DieOnMisguess: Pirate Ginie Przy Zlym Zgadnieciu
+    PlagueBearer:
+      RoleName: Plague Bearer
+      Description: Uzyj przycisku Zabojstwa, aby zakazic wszystkich. Po zakazeniu wszystkich, Plague Bearer zmienia sie w Pestilence.
+      Blurb: Zakaz Wszystkich i Zostan Pestilence
+      Options:
+        InfectCooldown: Odnowienie Zakazenia
+      InfectedHistoryMessage: '{0}::0 zakazil(a) {1}::1.'
+      ButtonText: Zakaz
+    Postman:
+      RoleName: Postman
+      Description: Postman musi dostarczac listy do innych graczy. Skoncz zadania, aby otrzymac cel (gracza), do ktorego masz dostarczyc poczte (moze miec strzalki wskazujace cel, jesli wlaczone).\n\nPo zdobyciu celu (oznaczonego czarnym nickiem), Postman musi dostarczyc list (dotknac celu). Skoncz kolejne zadanie, aby uzyskac nowy cel, jednak jesli zrobisz to bez dostarczenia poczty do pierwszego celu, Postman popelni samobojstwo.\n\nPo dostarczeniu przesylek do wszystkich zywych graczy, na nastepnym spotkaniu zostanie wyslana wiadomosc powiadamiajaca innych graczy, ze musza wyrzucic Postmana. Jesli Postman nie zostanie wyrzucony podczas tego spotkania, wygra, a gra sie zakonczy.
+      Blurb: Dostarcz Wszystkie Listy Aby Wygrac
+      Announcement: Postman ukonczyl wszystkie swoje dostawy. Wyrzuccie go, inaczej wygra gre.
+      Postman:
+        Options:
+          ArrowsToTargets: Posiada Strzalki Do Celow
+          TargetDies: Gdy Cel Umiera
+    Retributionist:
+      RoleName: Retributionist
+      Description: Retributionist to neutralny zabojca, ktory ma zdolnosc mszczenia sie.\n\nJesli inny gracz sprobuje zabic Retributionista, zabojstwo zostanie zablokowane, a Retributionist zostanie teleportowany do losowej wentylacji. Retributionist bedzie mial wtedy okreslony czas na znalezienie swojego zabojcy (oznaczonego pomaranczowym nickiem) i zabicie go, zanim czas minie.\n\nJesli zabije na czas, Retributionist przezyje, w przeciwnym razie zginie.
+      Blurb: Zyskaj Druga Szanse Na Zycie
+      Options:
+        RevengeTimeLimit: Limit Czasu Na Zemste
+        InvisibleRevenge: Niewidzialny Podczas Zemsty
+        TotalRevengeAmount: Liczba Zemst
+    SchrodingersCat:
+      RoleName: Schrödinger's Cat
+      Description: Schrödinger's Cat zmienia druzyne za kazdym razem, gdy ktos probuje go zabic. Ma maksymalna liczbe zyc i bedzie zmienial druzyny, az skoncza mu sie zycia lub gra sie zakonczy.\n\nNazwa roli Schrödinger's Cat zmieni sie, aby odzwierciedlac, w ktorej druzynie obecnie sie znajduje. Jego zadaniem jest pomoc tej druzynie wygrac, broniac ich w grze lub odwracajac podejrzenia od swojego czlonka druzyny.\n\nSchrödinger's Cat wygra z druzyna, w ktorej jest na koniec gry. Np. jesli Jackal zabije Schrödinger's Cata, jego rola zmieni sie na "Jackalcat", a Schrödinger's Cat wygra z Jackalem (zakladajac, ze nadal jest Jackalcatem do konca gry).\n\nW przeciwienstwie do Copycata, Schrödinger's Cat nie moze zabijac.
+      Blurb: Zmieniaj Druzyny Przy Kazdej Probie Zabojstwa Na Tobie
+      Aliases: Schrodingers Cat, SC, SCat, S Cat, SchrodingersCat, Schrodinger's Cat
+      CopycatFactionChangeName: '{0}cat'
+      CatFactionChangeName: '{0}cat'
+      Options:
+        NumberOfLives: Liczba Zyc
+        KillerKnowsCat: Zabojca Zna Schrodinger's::0 Cata::1
+    Survivor:
+      RoleName: Survivor
+      Description: Przezyj do konca gry, aby wygrac.\n\nSurvivor moze uzyc przycisku Zwierzaka, aby chronic sie przed atakami przez krotki czas. Survivor nie moze wygrac z Executionerem lub Jesterem.
+      Blurb: Przezyj Do Konca Aby Wygrac
+      Options:
+        VestDuration: Czas Trwania Tarczy
+        VestCooldown: Odnowienie Tarczy
+        TotalShields: Liczba Tarcz
+      ButtonText: Tarcza
+    Taskrunner:
+      RoleName: Taskrunner
+      Description: Taskrunner musi ukonczyc wszystkie swoje zadania, aby wygrac. Nie moze zginac, dopoki okreslona liczba zadan (w zaleznosci od ustawien hosta) nie zostanie ukonczona.\n\nGdy Taskrunner jest bliski ukonczenia wszystkich swoich zadan, wszyscy otrzymuja strzalke wskazujaca prosto na niego, a Taskrunner bedzie mial wskaznik "⚠" obok swojego nicku.\n\nZabij Taskrunnera zanim skonczy zadania, aby go powstrzymac. Taskrunner nie moze zostac wyrzucony w glosowaniu w zadnym momencie, musi zostac zabity.
+      Blurb: Ukoncz Zadania Aby Wygrac Samemu
+      Options:
+        ImmuneToRangedInteractions: Odporny na Interakcje Zdalne
+        RemainingTaskWarning: Ostrzezenie O Pozostalych Zadaniach
+        RemainingTaskTargetable: Pozostale Zadania Do Namierzenia
+    Terrorist:
+      RoleName: Terrorist
+      Description: Ukoncz wszystkie zadania i zgin, aby wygrac. Terrorist moze rowniez zostac wyrzucony w glosowaniu, aby wygrac, w zaleznosci od ustawien hosta.
+      Blurb: Ukoncz Wszystkie Zadania, A Nastepnie Zgin Aby Wygrac
+      Options:
+        CanWinBySuicide: Moze Wygrac Przez Samobojstwo
+        CanWinByExiled: Moze Wygrac Przez Wyrzucenie
+    Vulture:
+      RoleName: Vulture
+      Description: Uzyj przycisku Zgloszenia, aby jesc martwe ciala i sprawic, by staly sie niemozliwe do zgloszenia. Vulture moze przelaczac sie miedzy jedzeniem cial a ich zglaszaniem za pomoca przycisku Zwierzaka.\n\nVulture wygrywa, gdy zje ustalona liczbe cial, i moze rowniez miec strzalke wskazujaca na martwe ciala, jesli zostalo to wlaczone przez hosta.
+      Blurb: Jedz Martwe Ciala
+      EatingModeText: Ucztowanie
+      ReportingModeText: Zglaszanie
+      Options:
+        RequiredBodies: Wymagane Ciala
+        HasImpostorVision: Posiada Wizje Impostora
+        SwitchModes: Moze Przelaczac Miedzy Jedzeniem A Zglaszaniem
+        CanUseVent: Moze Uzywac Wentylacji
+        HasArrowsToBody: Posiada Strzalki Do Cial
+      EatButtonText: Pozryj
+      ReportButtonText: Zglos
+    Werewolf:
+      RoleName: Werewolf
+      Description: Werewolf to neutralny zabojca, ktory moze uzyc przycisku Zwierzaka, aby rozpoczac szal (rampage) i zabijac z krotszym Czasem Odnowienia Zabojstwa.\n\nWerewolf moze zabijac tylko podczas szalu.
+      Blurb: Wpadnij W Szal i Zabij Wszystkich
+      Rampage: Zabij Wszystkich
+      Options:
+        RampageKillCooldown: Odnowienie Zabojstwa W Szale
+        RampageCooldown: Odnowienie Szalu
+        RampageDuration: Czas Trwania Szalu
+        CanVentNormally: Moze Uzywac Wentylacji Normalnie
+        CanVentInRampage: Moze Uzywac Wentylacji W Szale
+      PetButtonText: Szal
+      KillButtonText: Rozszarp
+    GM:
+      RoleName: GM
+      Blurb: Jestes Mistrzem Gry (Game Master)
+      Description: "Mistrz" gry (czyli host). Gdy host jest GM, nie jest liczony jako gracz w grze i "umiera" natychmiast po pojawieniu sie w grze. Dzieki temu moze obserwowac wszystkich graczy, aby upewnic sie, ze gra dziala poprawnie (Albo zeby mogl byc AFK).
+    Bait:
+      RoleName: Bait
+      Description: Gdy Bait zostanie zabity, jego zabojca automatycznie zglosi cialo.
+      Blurb: Wymuszone Zgloszenie Po Smierci
+      Options:
+        AnnounceBait: Oglos Baita na Pierwszym Spotkaniu
+      BaitAnnounceMessage: '{0} to Bait! Gdy zginie, zabojca automatycznie zglosi cialo.'
+    Bewilder:
+      RoleName: Bewilder
+      Description: Gdy ktos z Bewilder zginie, zmusza swojego zabojce do znacznego zmniejszenia zasiegu widzenia do konca gry.
+      Blurb: Zmniejsza Wizje Zabojcy Po Smierci
+      BewilderedStatus: Oszolomiony
+      BewilderedDescription: Status Bewildered (Oszolomienie) zmniejsza twoja wizje o okreslony mnoznik.
+      Options:
+        VisionMultiplier: Mnoznik Wizji
+    Deadly:
+      RoleName: Deadly
+      Blurb: Krotszy Czas Odnowienia Zabojstwa
+      Description: Gracze z modyfikatorem deadly maja skrocony czas odnowienia zabojstwa o ustalony procent.
+      Options:
+        CooldownReduction: Redukcja Odnowienia
+        AssignableToNonKilling: Mozna Przypisac Do Niezabijajacych
+    Diseased:
+      RoleName: Diseased
+      Description: Mnozy czas odnowienia zabojstwa zabojcy po smierci
+      Blurb: Zwieksz Czas Odnowienia Zabojstwa Zabojcy
+      Options: 
+        CooldownIncrease: Zwiekszenie Odnowienia
+      DiseasedAffectDescription: Masz status "Diseased". Oznacza to, ze twoj czas odnowienia zabojstwa jest zwiekszony o okreslony procent.
+    Escalation:
+      RoleName: Escalation
+      Blurb: Zyskuj Predkosc Za Zabojstwa
+      Description: Gracze z modyfikatorem Escalation zyskuja stale zwiekszenie predkosci za kazde zabojstwo.
+      Options:
+        SpeedGainPerKill: Dodatkowa Predkosc Za Smierc Gracza
+    Flash:
+      RoleName: Flash
+      Description: Flash sprawia, ze gracz porusza sie szybciej niz inni gracze.
+      Blurb: Zwieksza Predkosc
+      Options:
+        SpeedIncrease: Zwiekszenie Predkosci
+    Guesser:
+      RoleName: Guesser
+      Description: >-
+        Daje dowolnej roli zdolnosc zgadywania. Guesserzy maja mozliwosc zgadywania rol graczy, aby ich wyeliminowac.
+
+
+        Podczas spotkania, Guesser moze wybrac gracza, ktorego chce zgadnac, glosujac na niego. Po glosowaniu Guesser moze uzyc komendy na czacie (/cmd [nazwaroli]), aby wybrac role, ktora chce zgadnac.
+
+        Aby zakonczyc zgadywanie, zaglosuj ponownie na gracza, aby potwierdzic, ze wszystko jest poprawne. Jesli zgadniecie jest poprawne, zgadywany gracz zginie, w przeciwnym razie Guesser zginie.
+
+        Aby anulowac zgadywanie, mozesz pominac glosowanie w dowolnym momencie, a twoj nastepny glos bedzie normalny.
+
+        Uwaga: Odkryte role (np. od Oracle) nie moga byc zgadywane.
+      Blurb: Zgaduj Role Graczy
+      Options:
+        GuesserPerMeeting: Zgadniecia na Spotkanie
+        CanGuessTeammates: Moze Zgadywac Czlonkow Druzyny
+        FactionMaxGuessers: '{0}::0 Maks. Guesserow Frakcji'
+        NeutralKillingSetting: Moze Zgadywac Neutralnych::0 Zabojcow::1
+        NeutralPassiveSetting: Moze Zgadywac Neutralnych::0 Pasywnych::1
+        ImpostorSetting: Moze Zgadywac Impostorow::0
+        CrewmateSetting: Moze Zgadywac Crewmate'ow::0
+        MadmateSetting: Moze Zgadywac Madmate'ow::0
+        SubroleSetting: Moze Zgadywac Podrole::0
+        RestrictedToNonVote: Ograniczone Do Rol Niezwiązanych Z Glosowaniem
+        FollowGuesserSettings: Podazaj Za Ustawieniami Guessera
+      GuesserTitle: Guesser
+      UnknownRole: Nieznana rola {0}. Mozesz wpisac '/cmd available', aby zobaczyc wszystkie role, ktore mozesz zgadnac.
+      HintMessage: Zostalo ci {0} zgadniec. Zaglosuj na gracza, ktorego chcesz sprobowac zgadnac.
+      NoGuessesLeft: Skonczyly ci sie zgadniecia. Twoj nastepny glos dziala juz normalnie.
+      SkippedGuessing: Wyszles z trybu zgadywania. Twoj nastepny glos dziala juz normalnie.
+      GuessDeathAnnouncement: >-
+        Guesser zgadnal.
+
+        {0} zginol(ela).
+      CantGuessBecauseOfRole: Twoja rola uniemozliwila ci zgadniecie {0}! Sprobuj innego gracza.
+      CantGuessKnownRole: Widzisz role gracza {0}! Nie mozesz zgadnac tego gracza.
+      CantGuessTeammate: "{0} to czlonek twojej druzyny! Nie mozesz zgadnac tego gracza."
+      PickedRoleText: >-
+        Probujesz zgadnac gracza {0} jako {1}. Aby potwierdzic to zgadniecie, zaglosuj na tego gracza ponownie.
+
+        W przeciwnym razie zaglosuj na innego gracza, aby zresetowac proces.
+      PickedPlayerText: Wybrales do zgadniecia gracza {0}. Aby wybrac role, wpisz `/cmd [nazwaroli]`. Ta komenda bedzie ukryta przed innymi graczami.
+    LastResort:
+      RoleName: Last Resort
+      Description: Jako Last Resort mozesz zaglosowac na siebie, aby zyskac dodatkowe glosy na reszte meczu. Ten glos zostaje anulowany i po tym mozesz zaglosowac na kogokolwiek innego.\n\nWada jest to, ze twoja rola jest teraz ujawniona publicznie, zeby wszyscy ja widzieli.
+      Blurb: Zdobadz dodatkowe glosy w ostatniej sekundzie
+      Options:
+        AdditionalVotes: Dodatkowe Glosy
+      RevealText: '{0} zostal(a) ujawniony(a) jako {1}!'
+      HintText: Zaglosuj na siebie, aby ujawnic swoja role i zyskac dodatkowe glosy, lub mozesz zaglosowac na dowolnego innego gracza normalnie.
+      Nimble:
+      RoleName: Nimble
+      Description: Daje dowolnej roli mozliwosc uzywania wentylacji, nawet jesli wczesniej nie mogla tego robic.
+      Blurb: Zdobadz mozliwosc uzywania wentylacji!
+    Oblivious:
+      RoleName: Oblivious
+      Description: Gracz z modyfikatorem Oblivious nie moze zglaszac martwych cial. Role, ktore polegaja na zglaszaniu cial (np. Medium) nie moga otrzymac modyfikatora Oblivious.
+      Blurb: Nie Moze Zglaszac Cial
+      Options:
+        PassOnDeath: Przekaz Po Smierci
+    Obvious:
+      RoleName: Obvious
+      Description: Obvious automatycznie zglasza ciala, z ktorymi wejdzie w kontakt.
+      Blurb: Automatyczne Zglaszanie Cial
+    Rebellious:
+      RoleName: Rebellious
+      Description: Modyfikator Rebellious pozwala uzytkownikowi zachowac umiejetnosc swojej roli, jednoczesnie stajac sie madmate'em.\n\nOznacza to, ze gracz jest sprzymierzony z Impostorami i uwazany za wroga zalogi, wiec role takie jak Snitch moga zdemaskowac Rebellious.
+      Blurb: Zdobadz zaufanie zalogi
+      Options:
+        AssignToNK: Przypisz do NK
+        AssignToNP: Przypisz do NP
+        FactionMaxRogues: '{0}::0 Maksymalnie Rebellious we Frakcji'
+    Rogue:
+      RoleName: Rogue
+      Description: Modyfikator Rogue pozwala uzytkownikowi zachowac umiejetnosci swojej roli, dajac mu jednoczesnie mozliwosc zabijania.\n\nZabij wszystkich innych graczy, aby wygrac. Jesli Crewmate lub Impostor ma modyfikator Rogue, nie wygra ze swoimi odpowiednimi druzynami.
+      Blurb: Uzyj swojej umiejetnosci, aby zabic wszystkich
+      Options:
+        RestrictToCompatbileRoles: Ogranicz Do Kompatybilnych Rol
+        FactionMaxRogues: '{0}::0 Maksymalnie Rogue we Frakcji'
+    Romantic:
+      RoleName: Romantic
+      Blurb: Wybierz partnera, z ktorym spedzisz zycie
+      Description: Podczas pierwszego spotkania w grze, Romantic MUSI zaglosowac na gracza, ktory zostanie jego partnerem (w przeciwnym razie zginie). Po wyborze partnera, Romantic moze uzyc przycisku Zwierzaka, aby tymczasowo dac tarcze swojemu partnerowi.\n\nJesli partner Romantica zginie, zmieni sie on w Vengeful Romantic lub Ruthless Romantic w zaleznosci od ustawien hosta.\n\nRomantic moze wygrac z partnerem lub bez niego (tylko jako wygrana solo) w zaleznosci od ustawien hosta.
+      Options:
+        TargetKnowsRomantic: Powiadom Cel o Romansie
+        ProtectionCooldown: Odnowienie Ochrony
+        ProtectionDuration: Czas Trwania Ochrony
+        PartnerCanWin: Partner moze wygrac z Romantikiem
+        CancelGameWinIfSolo: Anuluj Wygrana Gry Jesli Zwyciezca Solo
+      PartnerText: Partner::0 {0} ♥::0
+      RomanticMessage: Jestes Romantikiem. Musisz wybrac partnera do konca tego spotkania, inaczej zginiesz! Aby wybrac partnera, zaglosuj na niego dwa razy! Potem mozesz glosowac normalnie.
+      RomanticSelectMessage: Wybrales gracza {0} na partnera. Aby potwierdzic, zaglosuj na niego ponownie, w przeciwnym razie zaglosuj na innego gracza.
+      ConfirmedPartnerMessage: Potwierdziles, ze {0} jest twoim partnerem. Mozesz teraz glosowac normalnie.
+      NotifyPartnerMessage: Zostales wybrany przez {0} na romantycznego partnera! Gratulacje!
+      NoSkipMessage: Nie mozesz pominac glosowania, dopoki nie wybierzesz partnera!
+    RuthlessRomantic:
+      RoleName: Ruthless Romantic
+      Blurb: Nie Zostaw Nikogo Przy Zyciu
+      Description: "Ruthless Romantic jest przypisywany graczom, ktorzy mieli modyfikator Romantic, a ich romantyczny partner zostal zabity. Dzialaja jako normalny neutralny zabojca, wygrywajac w pojedynke. Jesli gracz tej roli byl poczatkowo Crewmate'em, przycisk Zwierzaka dziala jako przycisk Zabojstwa ze wskaznikiem 'CD: Xs' do odnowienia zabojstwa."
+    Sleuth:
+      RoleName: Sleuth
+      Description: Uzyj przycisku zgloszenia, aby zglosic cialo. Na czacie spotkania Sleuth otrzyma wiadomosc ujawniajaca role martwego gracza.\n\nSleuth moze zobaczyc role martwego gracza tylko wtedy, gdy sam zglosil cialo.
+      Blurb: Poznaj Role Zmarlych Graczy
+    TieBreaker:
+      RoleName: Tiebreaker
+      Description: Jesli jest remis w glosach miedzy dwoma graczami na spotkaniu, glos Tiebreakera zadecyduje, kto zostanie wyrzucony lub czy glosowanie bedzie pominiete.
+      Blurb: Rozstrzygaj Remisy
+      TieBreakerMessage: Remis zostal rozstrzygniety przez {0}!
+    Torch:
+      RoleName: Torch
+      Description: Torch jest odporny na wylaczenie swiatel.
+      Blurb: Odporny Na Wylaczenie Swiatel
+    Unstoppable:
+      RoleName: Unstoppable
+      Blurb: Przebijaj Sie Przez Przeciwnikow
+      Description: Gracze z Unstoppable moga zabijac przez wiekszosc rodzajow ochrony, w tym tarcze Medica.\n\nW zaleznosci od opcji hosta moze to nawet obejmowac "czysta" odpornosc, taka jak Taskrunner.
+      Options:
+        CanKillUntargetable: Moze Zabijac Nienamierzalnych Graczy
+    VengefulRomantic:
+      RoleName: Vengeful Romantic
+      Blurb: Pomscij Swoja Prawdziwa Milosc
+      Description: Vengeful Romantic jest przypisywany graczom, ktorzy mieli modyfikator Romantic, a ich romantyczny partner zostal zabity. Ich celem jest teraz wyledzenie zabojcy partnera i zabicie go. Vengeful Romantic moze uzyc przycisku Zwierzaka lub przycisku Zabojstwa (jesli go ma), aby zabic innego gracza, ale jesli wezmie za cel niewinnego gracza, zginie z powodu pomylki. Po pomyslnym pomszczeniu partnera, Vengeful Romantic odzyskuje swoj normalny warunek wygranej ze swoja bazowa rola.
+      Adjective: Vengeful
+      Options:
+        CanKillBystanders: Moze Zabijac Swiadkow
+        ArrowToKiller: Strzalka Do Zabojcy
+        SuicideAfterRevenge: Samobojstwo Po Zemscie
+    Watcher:
+      RoleName: Watcher
+      Description: Moze zobaczyc glosy wszystkich podczas spotkan, nawet gdy Anonimowe Glosowanie jest wlaczone. Watcher nie jest nikomu przypisywany, gdy Anonimowe Glosowanie jest wylaczone w Ustawieniach Gry.
+      Blurb: Moze Zobaczyc Glosy Wszystkich
+    Workhorse:
+      RoleName: Workhorse
+      Description: Modyfikator Workhorse daje graczowi dodatkowe zadania oprocz tych juz przypisanych.
+      Blurb: Ciezko Pracuje, Ma Wiecej Zadan
+      Options:
+        AdditionalShortTasks: Dodatkowe Krotkie Zadania
+        AdditionalLongTasks: Dodatkowe Dluga Zadania
+    Subroles:
+      Sleuth:
+        SleuthMessage: Ustaliles, ze {0} to {1}! Dobra robota, Detektywie!
+        SleuthTitle: Sleuth {0}
+    Illegal:
+      RoleName: <Roles.Illegal.RoleName>
+      Blurb: <Roles.Illegal.Blurb>
+    LoversReal:
+      RoleName: <Roles.LoversReal.RoleName>
+      Blurb: <Roles.LoversReal.Blurb>
+    Miscellaneous:
+      PlayerSelector:
+        SelectPlayerString: 'Wybrales: <b>{0}</b>'
+        UnselectPlayerString: 'Odznaczyles: <b>{0}</b>'
+        ConfirmationString: 'Potwierdziles: <b>{0}</b>'
+    Debugger:
+      RoleName: <Roles.Debugger.RoleName>
+      Blurb: <Roles.Debugger.Blurb>
+    Duplicator:
+      Options:
+        DuplicateCooldown: Odnowienie Duplikacji
+        DuplicateDuration: Czas Trwania Duplikacji
+        SpawnLocation: Miejsce Pojawienia Sie
+        CurrentLocation: Obecne
+        RandomLocation: Losowe
+        KillRadius: Promien Zabijania
+        OnlyKillUnalliedPlayers: Zabijaj Tylko Graczy Bez Sojuszu
+      RoleName: Duplicator
+      Blurb: Sklonuj Siebie
+      TrickedCauseOfDeath: Oszukany
+      Description: Uzyj przycisku zwierzaka, aby stworzyc swojego klona. Klony sa usuwane podczas spotkania, po smierci lub rozlaczeniu. W zaleznosci od ustawien hosta, klony moga pojawic sie na tobie lub w losowym pokoju. Nie mozesz umieszczac klonow obok ludzi.
+      Mutable:
+        KillRadius: Kazdy, kto wejdzie w odleglosc {0} od twojego klona, zginie.
+      ButtonText: Sklonuj
+    GuesserRoleBase:
+      GuesserRoleBase: Guesser
+      PickedRoleText: Zamierzasz zgadnac gracza {0} jako {1}. Jesli jestes tego pewien, zaglosuj na {0} ponownie, aby sfinalizowac zgadniecie. W przeciwnym razie mozesz wybrac innego gracza glosujac na niego.. LUB wybrac inna role wpisujac /r [nazwaroli]
+      PickedPlayerText: Zgadujesz role gracza {0}. Aby zgadnac jego role, wpisz /r [nazwaroli].
+      TypeRText: Prosze wpisac /r [nazwaroli], aby zgadnac ta role.
+      UnknownRole: Nieznana rola {0}. Mozesz uzyc /perc, aby zobaczyc wszystkie wlaczone role.
+      FinishedGuessingText: Potwierdziles swoje zgadniecie. Jesli nie jestes martwy, mozesz teraz glosowac normalnie.
+      ErrorCompletingGuess: Blad podczas zgadywania. Mozesz sprobowac zgadnac ponownie.
+      GuessAnnouncementMessage: Guesser zgadnal. {0} zginal(ela).
+    Genie:
+      RoleName: Genie
+      Options:
+        SuccessChance: Szansa Na Sukces
+        MaxGifts: Maksymalnie Zyczen
+      WishFailed: Sprobowales zyczyc graczowi {0} modyfikatora {1}, ale sie nie udalo.
+      WishGranted: Zyczyles graczowi {0} modyfikatora {1} i odniosles sukces! Otrzymal(a) on(a) ten modyfikator!
+      MeetingMessage: Zaglosuj na gracza dwa razy, aby zyczyc mu prezentu! Lub pomin, aby przejsc do normalnego glosowania.
+      OutOfWishes: Skonczyly ci sie zyczenia. Nie bedziesz juz mial mozliwosci glosowania na kogos na poczatku spotkania.
+      Blurb: Daj Graczom Modyfikatory
+      AlreadyWished: Juz zyczyles modyfikatora graczowi {0}. Sprobuj na innym graczu!
+      Description: Na spotkaniach masz szanse na wybranie gracza, ktory otrzyma modyfikator. Genie moze dac tylko pozytywne modyfikatory wlaczone przez hosta. Szansa nie jest gwarantowana, moze sie nie udac, a ty stracisz zyczenie. Nie mozesz zyczyc czegos temu samemu graczowi dwa razy.
+    Painter:
+      GracePeriodText: 'Okres Laski Bez Zabijania: {0}'
+      RoleName: Painter
+      Blurb: Zabij przeciwne kolory
+      Description: Pozbadz sie graczy o innych kolorach. W zaleznosci od ustawien hosta bedziesz zabijal innych graczy lub zmienial ich kolor na swoj.
+    Striker:
+      ReviveCooldown: 'Odrodzenie Za: {0}'
+      GrabbedFlag: Zlapales flage! Przeciwna druzyna ma strzalki do twojej lokalizacji!
+      RoleName: Striker
+      Blurb: Chron Swojej Flagi
+      Description: Uzyj przycisku zwierzaka na fladze przeciwnej druzyny, aby ja podniesc. Wszyscy gracze otrzymaja strzalke wskazujaca na twoja lokalizacje, gdy masz flage.\nW zaleznosci od ustawien hosta, mozesz byc wolniejszy lub nie moc juz wchodzic do wentylacji. Gdy ktos uzyje na tobie przycisku zabojstwa, nie umrzesz. Zamiast tego zostaniesz teleportowany z dala na kilka sekund. Po zakonczeniu odrodzenia, wrocisz do swojej bazy.
+      OvertimeTitle: <b>DOGRYWKA</b>
+      OvertimeDeathMessage: Host wlaczyl <b>'Nahla Smierc'</b> podczas Dogrywki, co oznacza, ze odradzanie jest wylaczone.
+      CaptureButtonText: Przejmij
+      TakeButtonText: Wez
+      GracePeriodTime: >-
+        Niesmiertelnosc Znika
+
+        za: {0}
+    Jailor:
+      Options:
+        JailCooldown: Odnowienie Uwiezienia
+        JailorActionButton: Przycisk Akcji Jailora
+        MaxExecutionTimes: Maks. Liczba Egzekucji
+        JailedPlayersVoteCounts: Glos Uwiezionego Gracza Liczy Sie Dla Jailora
+        JailedShowsToAll: Uwieziony Gracz Jest Widoczny Dla Wszystkich
+      JailedText: UWIEZIONY
+      JailorMessage: Zaglosuj na uwiezionego gracza, aby wykonac na nim egzekucje. W zaleznosci od ustawien, mozesz zginac, jesli jest on crewmate'em. Moze on takze byc zmuszony zaglosowac na te sama osobe co ty. Nikt nie moze zaglosowac na Uwiezionego i nie moze on zginac, chyba ze z twojej reki.
+      JailedMessage: Jestes Uwieziony. Nie mozesz glosowac ani zgadywac. Jednak inni gracze rowniez nie moga glosowac na ciebie. Mozesz miec nadzieje, ze Jailor nie wykona na tobie egzekucji.
+      PublicExecuteMessage: Uwieziony Gracz ({0}) zostal stracony.
+      CannotVote: Nie mozesz zaglosowac na Uwiezionego Gracza!
+      RoleName: Jailor
+      Blurb: Uwieziaj i Wykonuj Egzekucje Na Zabojcach
+      Description: Uzyj przycisku zwierzaka/zabojstwa, aby wybrac gracza do Uwiezienia przed spotkaniem. Na spotkaniu, uwieziony gracz moze byc widoczny dla wszystkich w zaleznosci od ustawien. Uwieziony gracz nie moze glosowac ani uzywac zadnych zdolnosci swojej roli na spotkaniu. Inni gracze rowniez nie moga glosowac na uwiezionego gracza.\nMozesz wykonac na nim egzekucje glosujac na niego. W zaleznosci od ustawien, mozesz popelnic samobojstwo, jesli to crewmate. Masz ograniczona liczbe egzekucji.\nW zaleznosci od ustawien, uwieziony gracz moze "glosowac" z toba, co oznacza, ze jesli ty zaglosujesz na kogos, on bedzie zmuszony zaglosowac na tego samego gracza.
+      ButtonText: Uwiez
+    Sidekick:
+      RoleName: Sidekick
+      Blurb: Pomoz Jackalowi zabic Wszystkich
+      Description: Jackal moze zrekrutowac gracza na Sidekicka, jesli opcja jest wlaczona. Sidekick straci swoja poprzednia role i umiejetnosci, ale stanie sie sojusznikiem Jackala i zyska mozliwosc zabijania. Sidekick nie bedzie mogl uzywac wentylacji ani sabotowac jak Jackal. Jesli Jackal umrze, Sidekick moze zostac awansowany (jesli opcja jest wlaczona), a ty bedziesz mogl zrekrutowac kolejnego sidekicka.
+    Turncoat:
+      Options:
+        RevealedTurncoatWincon: 'Warunek Wygranej Ujawnionego Turncoata to:'
+        RevealedTurncoatAllies: Ujawniony Turncoat Poznaje Sojusznikow
+        TurncoatLearns: Turncoat Dowiaduje Sie
+        MustBeAlive: Turncoat Musi Zyc Aby Wygrac
+        AfterReveal: Po Ujawnieniu
+        BeforeReveal: Przed Ujawnieniem
+        ImpFaction: Impostor
+        NeutralFaction: NK / Undead
+        NonCrewFaction: Nie-Crewmate
+        Immediately: Natychmiast
+        NextMeeting: Nastepne Spotkanie
+      NoTarget: Nie mozesz sie ujawnic, dopoki nie wybierzesz celu swoim przyciskiem zabojstwa.
+      BetrayReveal: >-
+        {0} to {1} i zdecydowal(a) sie zdradzic zaloge!
+
+        Jednakze, {1} przeklal(a) kogos! Jesli {1} zginie, zabierze przekletego gracza ze soba.
+      TurncoatHint: Zaglosuj na siebie, aby zdradzic zaloge. Ale pamietaj, ujawni to twoja tozsamosc reszcie zalogi.
+      BetrayedTeamPlayers: "Stanales po stronie frakcji '{0}'. Ci gracze sa w tej samej druzynie: {1}"
+      NoPlayersOnBetrayedTeam: Nie ma zadnych graczy w druzynie, dla ktorej zdradziles.
+      RoleName: Turncoat
+      Blurb: Zdradz Zaloge... albo nie
+      Description: Turncoat to rola neutralna, ktora poczatkowo jest w druzynie crewmate'ow. Na koniec gry wygraja z zaloga. Jednakze moga zdecydowac sie zdradzic zaloge, glosujac na siebie na spotkaniu. W rezultacie ich rola zostanie ujawniona wszystkim innym. Aby zapobiec natychmiastowemu wyrzuceniu przez zaloge Turncoata, mozesz oznaczyc gracza swoim przyciskiem zabojstwa przed ujawnieniem. Ten gracz zginie, jesli ty zginiesz, wiec mozesz uzyc tej osoby jako zabezpieczenia, aby utrzymac sie przy zyciu. Gracz nawet nie wie, ze jest ofiara, wiec mozesz klamac i obwiniac kogos zupelnie innego (jak Medica).
+    Detective:
+      Options:
+        SuspectsPerCase: Podejrzani Na Sprawe
+      RoleName: Detective
+      Blurb: Zbieraj info. Rozwiazuj morderstwa.
+      Description: Detective to rola crewmate'a, ktory bada ciala, aby znalezc zabojce. Na spotkaniach sa w stanie uzyc wskazowek od zglaszajacego, aby ustalic, gdzie jest cialo i jaka role impostora mial zabojca. W rundach moga badac graczy, aby dowiedziec sie, gdzie byli w czasie, gdy zginela ofiara.
+    Viper:
+      Options:
+        DissolveTime: Czas Rozpuszczania
+      RoleName: Viper
+      Blurb: Zabijaj, aby rozpuszczac ciala
+      Description: Viper to rola Impostora, ktora rozpuszcza ciala graczy po ich zabiciu. Gdy uplynie okreslony czas, cialo calkowicie zniknie i nie bedzie mozna go juz zglosic. Sa 3 etapy rozpuszczania, a czas potrzebny do calkowitego znikniecia jest ustalany przez hosta.
+    Drafter:
+      RoleName: Drafter
+      Blurb: Wybierz swoja kolejna role
+      Description: Na poczatku gry, Drafter moze wybrac swoja role z puli rol. Ta rola pojawia sie tylko w trybie gry Draft.
+      StaticOptions:
+    AutoKick: AutoKick
+    EnableGM: Host GM
+    KillFlashDuration: Czas Trwania Blysku Zabojstwa
+    SabotageTimeControl:
+      Enable: Kontrola Czasu Sabotazu
+      PolusReactorTime: Limit Czasu Reaktora na Polus
+      AirshipReactorTime: Limit Czasu Reaktora na Airship
+    TOSOptions:
+      Enable: Opcje TOS
+      AttackDefense: Wartosci Ataku i Obrony
+      ResetKillcooldown: Resetuj Odnowienie Zabojstwa
+      SkKillsRB: Serial Killer Zabija RoleBlockerow
+      AutoGameProgress: Automatyczny Postep Gry
+      RoundReview: Podsumowanie Rundy
+      AmnesiacRememberAnnouncement: Ogloszenie Przypomnienia Amnesiaca
+      GAVoteImmunity: Odpornosc na Glosowanie Guardian Angel
+    LightsPanelSettings:
+      Enable: Specjalne Ustawienia Wylaczonych Swiatel
+      AirshipGapRoom: Wylacz Panel Swiatel w Gap Room na Airship
+      AirshipCargoRoom: Wylacz Panel Swiatel w Cargo na Airship
+      AirshipViewingDeck: Wylacz Panel Swiatel w Viewing Deck na Airship
+    PlayerAppearanceCommands: Gracze maja dostep do komend /name, /color i /level
+    DisableTasks:
+      Enable: Wylacz Zadania
+      CardSwipe: Wylacz Zadania Przeciagania Karty
+      CardScan: Wylacz Skanowanie
+      UnlockSafe: Wylacz Otwieranie Sejfu
+      UploadData: Wylacz Przesylanie Danych
+      StartReactor: Wylacz Uruchamianie Reaktora
+      ResetBreaker: Wylacz Resetowanie Bezpiecznikow
+    RandomMap:
+      Enable: Tryb Losowych Map
+      Skeld: Dodaj The Skeld
+      Mira: Dodaj Mira HQ
+      Polus: Dodaj Polus
+      Airship: Dodaj Airship
+    RandomSpawn:
+      Enable: Losowe Odradzanie
+      AirshipExtraSpawn: Dodatkowe Odradzanie na Airship
+    SyncButton:
+      Enable: Tryb Przyciskow Synchronizacji
+      Count: Liczba Przyciskow Synchronizacji
+    VoteMode:
+      Enable: Tryb Glosowania
+      SkipMode: Gdy Pominieto Glosowanie
+      Mode:
+        Default: Domyslny
+        Suicide: Samobojstwo
+        SelfVote: Glos na Siebie
+        Skip: Pominiecie
+      SkipFirstMeeting: Gdy Pominieto Zignoruj Pierwsze Spotkanie
+      IgnoreNoBody: Gdy Pominieto Zignoruj Brak Ciala
+      IgnoreEmergencyMeeting: Gdy Pominieto Zignoruj Spotkanie Alarmowe
+      NonVote: Gdy Brak Glosu
+      Tie: Gdy Remis
+      TieMode:
+        Default: Domyslny
+        All: Wszyscy
+        Random: Losowy
+    AllAliveMeeting:
+      Enable: Spotkanie Wszystkich Zywych
+      Time: Czas Spotkania Wszystkich Zywych
+    AdditionalEmergencyCooldown:
+      Enable: Dodatkowe Odnowienie Spotkania Alarmowego
+    LadderDeath:
+      Enable: Smierc na Drabinie
+      Chance: Szansa na Smierc na Drabinie
+    FixFirstCooldown: Napraw Pierwsze Odnowienie Zabojstwa
+    DisableTaskWin: Wylacz Wygrana Przez Zadania
+    MinMax:
+      MinNeutralKiller: Min Neutralnych Zabojcow
+      MaxNeutralKiller: Max Neutralnych Zabojcow
+      MinNeutralNonKiller: Min Niezabijajacych Neutralnych
+      MaxNeutralNonKiller: Max Niezabijajacych Neutralnych
+    MadMates:
+      MinMadmates: Min Madmate'ow
+      MaxMadmates: Max Madmate'ow
+    NoGameEnd: Brak Konca Gry
+    GhostsCanSeeRoles: Duchy Widza Inne Role
+    GhostsCanSeeVotes: Duchy Widza Glosy
+    GhostIgnoreTasks: Duchy Ignoruja Zadania
+    CamoComms: Kamuflaz Przy Komunikacji
+    AutoDisplayResult: Auto Pokazywanie Ostatniego Wyniku
+    SuffixMode: Tryb Sufiksu
+    ColorNameMode: Tryb Nazw Kolorow
+    ChangeNameToRoleInfo: Zmien Nazwe na Info o Roli
+    ShowHistoryTimestamp: Pokaz Znacznik Czasu Historii
+    MayhemOptions:
+      Enable: Opcje Mayhem
+      AllRolesVent: Wiekszosc Rol Moze Wchodzic Do Wentylacji
+    CustomServerMode: N/A
+  Commands:
+    Aliases:
+      Help: pomoc
+    Help:
+      Roles:
+        Usage: Nieprawidlowe uzycie. Nalezy podac prawidlowa nazwe roli.
+        RoleNotFound: Nie znaleziono roli {0}
+      HelpTitle: Pomoc
+      HostSection: 'Komendy Hosta:'
+      GeneralSection: 'Komendy Ogolne:'
+      LobbySection: 'Komendy Lobby:'
+      InGameSection: 'Komendy w Grze:'
+      OtherSection: 'Inne Komendy:'
+      MessageParameter: msg
+      RoleNameParameter: role
+      NameParameter: name
+      IdCommandDescription: Pokaz wszystkich graczy/ID
+      SayCommandDescription: Wyslij wiadomosc do WSZYSTKICH graczy
+      KickCommandDescription: Wyrzuc podanego gracza
+      BanCommandDescription: Zbanuj podanego gracza
+      DumpCommandDescription: Stworz zrzut logow
+      TemplateHelpCommandDescription: Pobierz informacje o wszystkich komendach szablonow.
+      MyRoleCommandDescription: Pokaz opis twojej obecnej roli
+      RoleOptionCommandDescription: Pokaz opcje twojej obecnej roli
+      DescCommandDescription: Pokaz tekst pierwszego spotkania
+      LastResultCommandDescription: Pokaz ostatnie wyniki
+      WinnerCommandDescription: Pokaz ostatnich zwyciezcow
+      DeathCommandDescription: Pokaz swoja przyczyne smierci. (Dostepne tylko jesli jestes martwy lub w lobby)
+      DeathOtherCommandDescription: Pokaz przyczyne smierci innego gracza. (Dostepne tylko jesli jestes martwy lub w lobby)
+      RoleInfoCommandDescription: Pokaz opis/opcje roli
+      RolesCommandDescription: Pokaz WSZYSTKIE role w modzie
+      NowSpecificCommandDescription: Pokaz wszystkie wlaczone role/opcje dla podanej kategorii
+      NowAllCommandDescription: Pokaz wszystkie wlaczone role/opcje
+      PercCommandDescription: Pokaz wszystkie wlaczone role i ich szanse na pojawienie sie
+      NameCommandDescription: Zmien swoj nick
+      ColorCommandDescription: Zmien swoj kolor
+      StatsCommandDescription: Pokaz swoje statystyki dla lobby
+      StatsOtherCommandDescription: Pokaz statystyki innego gracza dla lobby
+      ModCommandDescription: Daj graczowi uprawnienia moda i mozliwosc wyrzucania lub banowania graczy!
+      AdminCommandDescription: Daj graczowi uprawnienia admina i mozliwosci Moda. Jednakze, admini moga dawac i zabierac moda innym graczom.
+      StartCommandDescription: Silowo i natychmiastowo startuje gre. Dodane dla adminow, aby mogli wystartowac gre bez hosta.
+      InfoCommandDescription: Wyslij ponownie informacje, ktore twoja rola wyswietlila na czacie na poczatku rundy.
+      StatusCommandDescription: Sprawdz, co oznacza ikona na twoim nicku lub nicku innego gracza.
+      HistoryCommandDescription: Zobacz caly log z ostatniej gry wraz ze znacznikami czasu od samego poczatku.
+    Stats:
+      PlayerNotFound: Nie znaleziono gracza "%s"
+    Color:
+      NotInRange: '{0} nie znajduje sie w zakresie prawidlowych kolorow.'
+    Winners: Zwyciezcy
+    Dump:
+      Success: Pomyslnie zrzucono log. Sprawdz folder z logami dla pliku "dump.log!"
+    HostOptions:
+      RoleInfo: ★ Info o Roli ★
+      RoleCategory: ★ Role {0}
+      CurrentRoles: Obecne Role
+    InvalidUsage: ⚠ Nieprawidlowe Uzycie ⚠
+    NotPermittedTitle: ⚠ Brak Uprawnien ⚠
+    NotPermittedText: Nie masz uprawnien do uzycia tej komendy.
+    Say:
+      MessageTitle: Wiadomosc od Hosta
+    Admin:
+      KickMessage: '{0} zostal(a) wyrzucony(a) przez hosta.'
+      BanMessage: '{0} zostal(a) zbanowany(a) przez hosta.'
+    Ids:
+      PlayerIdMessage: "ID gracza {0} to {1}"
+    PlayerNotFoundText: Nie znaleziono gracza "{0}".
+    CommandError: ⚠ Blad Komendy ⚠
+    Friends:
+      NoFriendcodeText: Nie mozna dodac {0}. Nie maja oni prawidlowego kodu znajomego (friendcode).
+      SuccessText: Pomyslnie dodano {0} ({1})
+      RemoveText: Pomyslnie usunieto znajomego {0} z listy znajomych
+      LastKnownAsText: 'Znany Ostatnio Jako: {0}'
+    Template:
+      CreatedTemplateText: 'Pomyslnie utworzono szablon (ID: {0}).'
+      ErrorRemovingTemplateText: Blad podczas usuwania szablonu.
+      SuccessRemovingTemplateText: 'Pomyslnie usunieto szablon (ID: {0}).'
+      SuccessTaggingTemplateText: 'Pomyslnie dodano tag "{0}" do szablonu (ID: {1}).'
+      ErrorTaggingTemplateText: 'Blad podczas dodawania tagu "{0}" do szablonu (ID: {1}).'
+      SuccessRemovingTagText: 'Pomyslnie usunieto tagi z szablonu (ID: {0}).'
+      ErrorPreviewingTemplateText: 'Blad podczas podgladu szablonu (ID: {0}).'
+      ErrorShowingTemplateText: Blad podczas pokazywania szablonu do {0}.
+      SuccessEditingTemplateText: 'Pomyslnie edytowano szablon (ID: {0}).'
+      ErrorEditingTemplateText: 'Blad podczas edycji szablonu (ID: {0}).'
+      ReloadTemplatesText: Pomyslnie przeladowano szablony.
+      ErrorRemovingTagText: 'Blad podczas usuwania tagow z szablonu (ID: {0}).'
+    TemplateCommands:
+      TemplateCommandTitle: Komendy Szablonow
+    LastResults:
+      NoPreviousGameText: Jeszcze nie rozegrano zadnej gry!
+      PlayerResultTitle: "Wyniki gracza {0}"
+      RoleText: <b>Rola:</b> {0}
+      ModifierText: <b>Mody:</b> {0}
+      WinnerText: Zwyciezca
+      ResultsText: Wyniki
+      WinResultText: 'Zwyciezcy: {0}'
+      WinReasonText: 'Powod: {0}'
+    MyDeath:
+      DirectDeathString: '{0} zginal(ela) z reki {1}\nPrzyczyna Smierci: {2}'
+      IndirectDeathString: "Przyczyna smierci gracza {0}: {1}"
+      CouldNotDetermineDeathText: Przyczyna smierci gracza {0} nie mogla zostac okreslona.
+      PlayerIsAliveText: '{0} wciaz zyje i nie ma przyczyny smierci.'
+      DeathInfoTitle: Info o Smierci
+      CannotViewDeathWhileAlive: Nie mozesz przegladac smierci, dopoki zyjesz!
+      ListExtension: lista
+      ListMessageStart: >
+        Ponizej znajduje sie lista wszystkich graczy i ich przyczyny smierci:
+    NoPreviousGameText: Jeszcze nie rozegrano zadnej gry!
+    Mods:
+      SomethingWentWrong: Cos poszlo nie tak podczas wykonywania tej komendy. Prosze sprawdz parametry.
+      SuccessfulMod: '{0} jest teraz modem! Maja teraz dostep do komend /kick i /ban!'
+      RemovedMod: '{0} zostal(a) usuniety(a). Nie maja juz dostepu do komend zwiazanych z moderacja.'
+      AlreadyMod: '{0} jest juz modem. Nic sie nie stalo.'
+    BugReports:
+      WaitingOnReport: Ten raport zostal anulowany, poniewaz czekamy na odpowiedz na twoj poprzedni raport.
+      FailedReport: >-
+        Wystapil blad podczas wysylania prosby. Prosze sprobowac ponownie za minute.
+
+        Blad: {0}
+      ReportingBug: Twoja prosba przeszla i wlasnie zglaszamy twoj blad. Dzieki!
+      ReportedBug: Twoj blad zostal pomyslnie zgloszony. Raz jeszcze, dziekujemy!
+      ReportSuggest: '{0} sugeruje ci zgloszenie "{1}".'
+      UploadingLog: Przesylanie pliku logu... (Czesc {0}/{1})
+    Role:
+      AbortSearch: Szukanie przerwane. Znaleziono ponad 5 rol dla twojego wyszukiwania. Prosze badz bardziej precyzyjny.
+      NoRoles: >-
+        Zadne role dla tego trybu gry nie pasuja do twojego wyszukiwania.
+
+        Czy przypadkiem wpisales(as) nieodpowiedni znak?
+    Info:
+      NoInfoMessage: Twoja rola nie ma zadnych informacji do wyswietlenia.
+    Poll:
+      PollStarted: >-
+        Glosowanie nad zmiana obecnego trybu gry wlasnie sie rozpoczelo!
+
+
+        Prosze zaglosuj na swoj wymarzony tryb gry uzywajac komendy /gmpoll vote (id)
+
+
+        To glosowanie wygasnie za {0}s
+      PollEnded: Glosowanie zakonczone! Wygral tryb {0} zdobywajac {1} glosow.
+      PollEndedTie: >-
+        Glosowanie zakonczone!
+
+        Wiele trybow mialo taka sama ilosc glosow, wiec losowo wybrano {0} z iloscia {1} glosow.
+      VoteMessage: Oddales(as) swoj glos na {0}!
+      NoVotes: Glosowanie zakonczone, nie oddano zadnych glosow.
+      NoPollActive: Zadne glosowanie nie jest aktualnie w toku.
+      PollActive: Glosowanie jest juz aktywne.
+      InvalidID: 'Nieprawidlowe ID trybu gry. Oto dostepne tryby:'
+      NoIdInCommand: 'Prosze podac ID trybu gry, na ktory chcesz zaglosowac. Oto dostepne tryby:'
+      CurrentStandings: >-
+        {0}
+
+        Pozostalo {1} sekund.
+      Hint: Obecnie trwa aktywne glosowanie, mozesz zaglosowac uzywajac <b>/gmpoll vote</b>.
+      AvailableModesTitle: Dostepne Tryby Gry
+      CurrentStandingsTitle: Obecne Wyniki
+    OldCommandWarning: >-
+      Uzywasz przestarzalej komendy!
+
+      Kazda komenda zostala zmieniona i wymaga uzycia '/cmd' na poczatku. Na przyklad, wpisales(as): '/{0}'. Prawidlowa komenda powinna brzmiec '/cmd {0}'.
+
+      Zostales(as) ostrzezony(a) na ten moment, ale ta przestarzala komenda przestanie dzialac w okolicach marca.
+  Announcements:
+    SystemMessage: Wiadomosc Systemowa
+    CannotSabotageMessage: Host zablokowal martwym graczom mozliwosc sabotowania.
+  OptionShower:
+    ActiveRolesList: Lista Aktywnych Rol
+    NextPage: Nacisnij (Tab) Aby Przejsc Dalej...
+  ModUpdater:
+    ModBrokenMessage: N/A
+    ModUpdateMessage: N/A
+    UpdateButton: N/A
+  HistoryEvent:
+    PlayerChangedRole: Zmieniono Role
+    Death:
+      PlayerMurdered: Zamordowany
+      PlayerSuicide: Popelnil Samobojstwo
+  PingDisplay:
+    AddonsLoaded: Zaladowane Dodatki
+    AddonsFailed: '{0} Dodatek/Dodatki Nie Mogl(y) Zostac Zaladowany(e): {1}'
+  Gamemodes:
+    Colorwars:
+      Options:
+        GracePeriod: Okres Laski
+  Statistics:
+    BodiesReported: Zgloszone Ciala
+    CommonTasksComplete: Skonczone Wspolne Zadania
+    Deaths: Smierci
+    FirstDeaths: Pierwsze Smierci
+    FirstKills: Pierwsze Zabojstwa
+    Games: Gry
+    Kills: Zabojstwa
+    LongTasksComplete: Skonczone Dlugie Zadania
+    MeetingsCalled: Zwolane Spotkania
+    MessagesSent: Wyslane Wiadomosci
+    PlayersExiled: Wyrzuceni Gracze
+    SabotagesCalled: Wywolane Sabotaze
+    SabotagesFixed: Naprawione Sabotaze
+    Shapeshifts: Zmiany Ksztaltu
+    ShortTasksComplete: Skonczone Krotkie Zadania
+    TimeAlive: Czas Spedzony Na Zywo
+    TimeDead: Czas Spedzony Jako Martwy
+    TimesExiled: Ilosc Wyrzucen
+    TimesVented: Ilosc Uzyc Wentylacji
+    TimesVoteSkipped: Pominiete Glosowania
+    TimesVoted: Ilosc Glosowan
+    TotalTasksComplete: Skonczone Zadania
+    TotalTime: Calkowity Czas Gry
+    TotalVotesFor: Calkowita Ilosc Glosow Na Gracza
+    CommsSabotaged: Sabotaze Komunikacji
+    DoorsSabotaged: Sabotaze Drzwi
+    LightsSabotaged: Sabotaze Swiatel
+    OxygenSabotaged: Sabotaze Tlenu
+    ReactorSabotaged: Sabotaze Reaktora
+    Losses: Prazki
+    Wins: Zwyciestwa
+    Statistics: Statystyki
+    Options:
+    Roles:
+      Maximum: Maksymalnie
+      SubsequentChance: Szansa Na Kolejne
+      CanVent: Moze Uzywac Wentylacji
+      CanSabotage: Moze Sabotowac
+      KillCooldown: Odnowienie Zabojstwa
+      ImpostorVision: Wizja Impostora
+      Switch: Przelacz
+    General:
+      OnText: WLACZONE
+      OffText: WYLACZONE
+      EnabledText: Wlaczone
+      DisabledText: Wylaczone
+      DefaultText: Domyslne
+      NeverText: Nigdy
+      ShowText: Pokaz
+      HideText: Ukryj
+      FriendsText: Znajomi
+      EveryoneText: Wszyscy
+      DurationText: Czas Trwania
+      AllText: Wszystkie
+      NoOneText: Nikt
+      CommonText: Wspolne
+      GlobalText: Globalne
+      CustomText: Niestandardowe
+      NoneText: Brak
+      SecondsSuffix: s
+      AlwaysText: Zawsze
+      Options: Opcje
+      Kill: Zabojstwo
+      Vent: Wentylacja
+      Pet: Zwierzak
+    RolesNeutral:
+      NeutralPassiveSlots: Sloty Neutralnych::0 Pasywnych::1
+      NeutralKillingSlots: Sloty Neutralnych::0 Zabojcow::2
+      MinimumNeutralPassiveRoles: Minimalnie Rol Neutralnych::0 Pasywnych::1
+      MaximumNeutralPassiveRoles: Maksymalnie Rol Neutralnych::0 Pasywnych::1
+      MinimumNeutralKillingRoles: Minimalnie Rol Neutralnych::0 Zabojcow::2
+      MaximumNeutralKillingRoles: Maksymalnie Rol Neutralnych::0 Zabojcow::2
+      NeutralTeamMode: Tryb Druzynowy Neutralnych::0
+      SameRoleText: Ta Sama Rola
+      KillingAndPassiveText: Zabojcy::2 I Pasywni::1
+      AlliedKnowRoles: Druzyna Zna Role Wszystkich
+    Subroles:
+      ModifierMaximumText: Maksymalnie Modyfikatorow::0 Na Gracza
+      EvenlyDistributeModifierText: Rownomiernie Rozdziel Modyfikatory::0
+      UncappedText: Bez Limitu
+      NoModifiersText: Brak Modyfikatorow
+      SubroleOptions: Opcje Podrol
+    Admin:
+      SectionTitle: Opcje Hosta
+      HostGM: Host GM
+      AutoKick: Auto Kick Z Czatu
+      AutoKickNoFriendcode: Wyrzuc Graczy Bez Kodu Znajomego
+      AutoKickLevel: Wyrzuc Graczy Ponizej Poziomu
+      AutoKickMobile: Wyrzuc Graczy Mobilnych
+      AutoStart: Auto Start
+      AutoStartOptionSuffix: Graczy
+      AutoPlayAgain: Auto Graj Ponownie
+      AutoStartPlayerThreshold: Prog Graczy
+      AutoStartMaxWaitTime: Maksymalny Czas Oczekiwania
+      AutoStartGameCountdown: Odliczanie Do Gry
+      SpectatorMode: Tryb Widza
+      AutoHauntCooldown: Odnowienie Auto Nawiedzenia
+      EnableWhitelist: Wlacz Biala Liste Przez Kod Znajomego
+    Debug:
+      SectionTitle: Opcje Debugowania
+      NoGameEnd: Zapobiegaj Koncowi Gry
+      NameRoleAssignment: Przydzielanie Rol Na Podstawie Nicku
+      AdvancedRoleAssignment: Zaawansowane Przydzielanie Rol
+    Gameplay:
+      SectionTitle: Opcje Rozgrywki
+      OptimizeRoleAmounts: Optymalizuj Ilosc Rol Dla Grywalnosci
+      FixFirstKillCooldown: Napraw Pierwsze Odnowienie Zabojstwa
+      DisableTasks: Wylacz Zadania
+      DisableCardSwipe: Wylacz Przeciaganie Karty
+      DisableMedScan: Wylacz Skanowanie Medyczne
+      DisableUnlockSafe: Wylacz Otwieranie Sejfu
+      DisableUploadData: Wylacz Przesylanie Danych
+      DisableStartReactor: Wylacz Uruchamianie Reaktora
+      DisableResetBreaker: Wylacz Resetowanie Bezpiecznikow
+      DisableTaskWin: Wylacz Wygrana Przez Zadania
+      GhostSeeRoles: Duchy Widza Role
+      GhostSeeInfo: Duchy Widza Info
+      GhostIgnoreTask: Duchy Ignoruja Zadania
+      SyncMeetingText: Synchronizuj Spotkania
+      SyncMeetingNever: Nigdy
+      ForceNoVenting: Wymus Brak Uzywania Wentylacji
+      FirstKillCooldown: Pierwsze Odnowienie Zabojstwa
+      TenSecondCooldown: 10 Sekund
+      GlobalCooldown: Globalne CD
+      RoleCooldown: CD Roli
+      SetCooldown: Ustaw CD
+      SetCooldownValue: Ustaw Wartosc Odnowienia
+      DisableFixWiring: Wylacz Naprawe Kabli
+      LadderDeath: Smierc Na Drabinie
+      ModifierTextMode: Tryb Tekstu Modyfikatora
+      FirstValue: Pierwszy
+      BlockDeadFromSabotaging: Zablokuj Martwym Sabotowanie
+      BlockDoorsWhenAllSabotagersAreDead: Zablokuj Zamykanie Drzwi Gdy Wszyscy Sabotazysci Sa Martwi
+      DisabledTasks:
+        DisableCardSwipe: Wylacz Przeciaganie Karty
+        DisableFixWiring: Wylacz Naprawe Kabli
+        DisableIdCode: Wylacz Wpisywanie Kodu ID
+        DisableScanBoardingPass: Wylacz Skanowanie Karty Pokladowej
+        DisableInsertKeys: Wylacz Wkladanie Kluczy
+        DisableAlignTelescope: Wylacz Kalibracje Teleskopu
+        DisableAssembleArtifact: Wylacz Skladanie Artefaktu
+        DisableBuyBeverage: Wylacz Kupowanie Napoju
+        DisableCalibrateDistributor: Wylacz Kalibracje Dystrybutora
+        DisableChartCourse: Wylacz Wytyczanie Kursu
+        DisableCleanO2Filter: Wylacz Czyszczenie Filtra O2
+        DisableCleanToilet: Wylacz Czyszczenie Toalety
+        DisableCleanVent: Wylacz Czyszczenie Wentylacji
+        DisableClearAsteroids: Wylacz Niszczenie Asteroid
+        DisableDecontaminate: Wylacz Dekontaminacje
+        DisableDivertPower: Wylacz Przekierowanie Zasilania
+        DisableDressMannequin: Wylacz Ubieranie Manekina
+        DisableFixShower: Wylacz Naprawe Prysznica
+        DisableMakeBurger: Wylacz Robienie Burgera
+        DisableMeasureWeather: Wylacz Mierzenie Pogody
+        DisableMonitorOxygen: Wylacz Monitorowanie Tlenu
+        DisablePickUpTowels: Wylacz Zbieranie Recznikow
+        DisablePolishRuby: Wylacz Polerowanie Rubinu
+        DisablePrimeShields: Wylacz Ladowanie Tarcz
+        DisableProcessData: Wylacz Przetwarzanie Danych
+        DisablePutAwayPistols: Wylacz Odkladanie Pistoletow
+        DisablePutAwayRifles: Wylacz Odkladanie Karabinow
+        DisableRecordTemperature: Wylacz Zapisywanie Temperatury
+        DisableRepairDrill: Wylacz Naprawe Wiertla
+        DisableRunDiagnostics: Wylacz Diagnostyke
+        DisableSortRecords: Wylacz Sortowanie Akt
+        DisableSortSamples: Wylacz Sortowanie Probek
+        DisableStabilizeSteering: Wylacz Stabilizacje Sterowania
+        DisableStartReactor: Wylacz Uruchamianie Reaktora
+        DisableStoreArtifacts: Wylacz Magazynowanie Artefaktow
+        DisableSubmitScan: Wylacz Skanowanie
+        DisableUnlockManifolds: Wylacz Odblokowywanie Kolektorow
+        DisableAlignEngineOutput: Wylacz Wyrownywanie Mocy Silnika
+        DisableDevelopPhotos: Wylacz Wywolywanie Zdjec
+        DisableEmptyGarbage: Wylacz Oproznianie Smieci
+        DisableFuelEngines: Wylacz Tankowanie Silnikow
+        DisableInspectSample: Wylacz Inspekcje Probki
+        DisableRebootWifi: Wylacz Restart Wifi
+        DisableOpenWaterways: Wylacz Otwieranie Droz Gosp. Wodnej
+        DisableReplaceWaterJug: Wylacz Wymiane Butli Z Woda
+        DisableResetBreaker: Wylacz Resetowanie Bezpiecznikow
+        DisableRewindTapes: Wylacz Przewijanie Tasm
+        DisableStartFans: Wylacz Uruchamianie Wentylatorow
+        DisableUnlockSafe: Wylacz Otwieranie Sejfu
+        DisableUploadData: Wylacz Przesylanie Danych
+        DisableWaterPlants: Wylacz Podlewanie Roslin
+      DisableCommonTasks: Wylacz Wspolne Zadania
+      DisableShortTasks: Wylacz Krotkie Zadania
+      DisableLongTasks: Wylacz Dlugie Zadania
+      CrewCanSoloKillers: Zabijajacy Crewmate Moze Robic 1v1 Z Imp/NK
+    Mayhem:
+      SectionTitle: Opcje Mayhem
+      RandomMaps: Wlacz Losowe Mapy
+      RandomSpawn: Losowe Odradzanie
+      CamoComms: Kamuflaz Przy Komunikacji
+      AllRolesCanVent: Wszystkie Role Moga Uzywac Wentylacji
+      Skeld: Skeld
+      Mira: Mira
+      Polus: Polus
+      Airship: Airship
+    Miscellaneous:
+      SectionTitle: Opcje Inne
+      AssignedPet: Przypisany Zwierzak
+      AllowNameCommand: Zezwol na /name
+      AllowColorAndLevelCommand: Zezwol na /color i /level
+      AutoDisplayResults: Auto Pokazywanie Wynikow
+      SuffixMode: Tryb Sufiksu
+      ColorNames: Kolorowe Nicki
+      LadderDeath: Smierc Na Drabinie
+      AutoDisplayCauseOfDeath: Auto Pokazywanie Przyczyny Smierci
+      AllowTeleportCommand: Zezwol na /tpin i /tpout
+      BlackscreenResolver: Rozwiazywanie Czarnego Ekranu
+      EventLog: Loguj Wydarzenia
+      KillsOnly: Tylko Zabojstwa
+    Sabotage:
+      SectionTitle: Opcje Sabotazu
+      DefaultValue: Domyslne
+      DisableSabotages: Wylacz Sabotaze
+      ReactorCountdown: Odliczanie Reaktora
+      OxygenCountdown: Odliczanie Tlenu
+      DisableReactor: Wylacz Reaktor
+      DisableOxygen: Wylacz Tlen
+      DisableLights: Wylacz Swiatla
+      DisableCommunications: Wylacz Komunikacje
+      DisableDoors: Wylacz Drzwi
+      DisableHelicopters: Wylacz Helikoptery (Crash Course)
+      CrashCourseCountdown: Odliczanie Helikopterow
+    RolesMadmates:
+      MadmatesTakeImpostorSlots: Madmaci::0 Zajmuja Sloty Impostorow
+    GameMode:
+      GamemodeText: Tryb Gry
+      GamemodeSelection: Wybor Trybu Gry
+      Standard:
+        Name: Standardowy
+        ButtonText: Ustawienia Lotus
+        Description: Modyfikuj wszystkie Standardowe ustawienia tutaj!
+        ImpostorTab: Ustawienia Impostorow
+        CrewmateTab: Ustawienia Crewmate'ow
+        NeutralTab: Ustawienia Neutralnych
+        MiscTab: Ustawienia Inne
+        HiddenTab: Ukryte
+        GamemodeDescription: Standardowa rozgrywka Among Us. Crewmaci koncza zadania i wyrzucaja zabojcow w glosowaniu, podczas gdy Impostorzy i Neutralni Zabojcy probuja wygrac dla swoich druzyn.
+      CaptureTheFlag:
+        Name: Capture The Flag
+        ButtonText: Ustawienia CTF
+        Description: Zmien wszystko na temat CTF tutaj!
+        GamemodeDescription: Standardowe Przejmij Flage (Capture The Flag). Gracze musza przejac flage przeciwnej druzyny i wrocic z nia do swojej bazy, aby zdobyc punkty. Jesli zostaniesz trafiony, odrodzisz sie po krotkim czasie. Po odrodzeniu bedziesz rowniez niesmiertelny przez pewien czas, dopoki ten nie minie lub nie zabijesz gracza.
+      Colorwars:
+        Name: Colorwars
+        ButtonText: Ustawienia Colorwars
+        Description: Modyfikuj ustawienia Colorwars tutaj!
+        GamemodeDescription: Gracze sa podzieleni na druzyny i otrzymuja losowe kolory.\nJesli Tryb Konwersji Koloru jest wlaczony, proba zabicia gracza zmieni jego kolor na twoj. Gra zakonczy sie, gdy pozostanie tylko jeden kolor. Jesli Nagla Smierc (Sudden Death) jest wlaczona, gdy liczba pozostalych kolorow spadnie do liczby ustalonej przez hosta, gracze zaczna sie nawzajem zabijac zamiast konwertowac.\n\nJesli Tryb Konwersji Koloru jest wylaczony, gracze musza zabijac graczy o innych kolorach, aby ich wyeliminowac. Gra zakonczy sie, gdy pozostanie tylko jeden kolor.
+      Draft:
+        Name: Draft
+        ButtonText: Ustawienia Draft
+        Description: Modyfikuj ustawienia trybu gry Draft tutaj!
+        RoleChoiceCount: Liczba Wyborow Rol
+        DraftTitle: Tryb Gry Draft
+        RandomOption: Losowe
+        PlayerEndTurn: Gracz {0} wybral {1}.
+        PlayerSwapChoice: 'Twoja decyzja to teraz: {0}. Pomin glosowanie, aby potwierdzic.{1}'
+        PlayerChoiceOptions: >-
+          Twoje opcje do wyboru to: {0}
+
+          Zaglosuj na dowolnego gracza, aby zmienic swoj wybor.
+        PlayerStartsTurn: Gracz {0} teraz wybiera swoja role. Ma {1} sekund na podjecie decyzji, zanim losowa zostanie wybrana automatycznie.
+        GamemodeDescription: To jest wariacja Standardowego Trybu Gry. Kazda rola w Standardowym Trybie Gry moze byc tutaj uzyta.\n\nTen tryb dziala jak standardowy, gdzie najpierw wybiera wszystkie role, ktore powinny zostac przypisane. Jednakze, nie przypisuje ich, a jedynie dodaje je do listy. Na poczatku gry zostanie zwolane spotkanie. Na tym spotkaniu otrzymasz wiadomosc z numerem, twoim wlasnym ID. Kazdy gracz (zaczynajac od najnizszego (1) do liczby graczy) bedzie po kolei wybieral role z losowej puli rol z listy. (Liczba rol do wyboru jest ustalana przez hosta). Mozesz zaglosowac na dowolnego gracza, aby zmienic swoj wybor. Jesli nie podobaja ci sie wylosowane role, zawsze jest dodatkowa opcja nazwana "Losowe" (Random). Ta opcja wybiera dowolna role, ktora jest nadal na liscie i nie zostala jeszcze wybrana. Kiedy jestes zadowolony ze swojego wyboru, mozesz pominac glosowanie, aby go potwierdzic. Jesli nie wybierzesz roli na czas, losowa zostanie wybrana dla ciebie automatycznie. Opcja, ktora wybrales, zostanie ogloszona na czacie. Wszyscy beda wiedziec, ze ta rola zostala wybrana, ale nie beda wiedziec, kto ja otrzymal.\n\nPo tym jak wszyscy gracze wybiora swoje role, spotkanie sie zakonczy i gra rozpocznie sie normalnie.
+        DecisionTime: Czas Na Decyzje
+        StartingInText: Rozpoczynanie Za {0}...
+        PlayerIdText: Twoje ID to {0}. Poczekaj na swoja kolej.
+    CaptureTheFlag:
+      SectionTitle: Ustawienia CTF
+      GameLength: Czas Trwania Gry
+      ReviveDuration: Czas Odrodzenia
+      CarryingSpeedMultiplier: Mnoznik Predkosci Noszenia
+      CarryingCanVent: Noszacy Flage Moze Wejsc W Wentylacje
+      OvertimeOnTies: Dogrywka Przy Remisach
+      OvertimeLength: Czas Trwania Dogrywki
+      SuddenDeath: Nagla Smierc
+      InvincibilityDuration: Czas Niesmiertelnosci Po Smierci
+    Colorwars:
+      SectionTitle: Ustawienia Colorwars
+      TeamSize: Rozmiar Druzyny
+      PreferSmall: Preferuj Mniejsze Druzyny
+      ConvertColorMode: Tryb Konwersji Koloru
+      GracePeriod: Okres Laski
+      CustomTeams: Wlasne Druzyny
+      TeamOption: Druzyna {0}
+      CustomTeamTitle: Wlasne Druzyny
+      EnablesWithXTeamsLeft: 'Wlacza sie przy # Pozostalych Druzynach'
+      DisableVents: Wylacz Wentylacje
+      EnableArrows: Ujawnij Lokalizacje Zywych Graczy
+  GUI:
+    GeneralButton: Ogolne
+    GraphicsButton: Grafika
+    SoundButton: Dzwiek
+    VentLibButton: VentLib
+    AddonsButton: Dodatki
+    ReturnButton: Wroc
+    LeaveGameButton: Opusc Gre
+    ModUpdateMenu:
+      ExitGameText: Wyjdz Z Gry
+      CloseText: Zamknij
+      UpdateText: Aktualizuj
+      UpdateAvailableText: Dostepne Aktualizacje!
+    LotusButton: Lotus
+    InnerslothButton: Innersloth
+    HistoryMenu:
+      ButtonText: Historia
+    ComboMenu:
+      ButtonText: Edytuj Kombo
+      DeleteArea:
+        TitleText: >-
+          Czy na pewno chcesz
+
+          usunac to kombo?
+      ChooseComboTypeArea:
+        ForceComboTitleText: Typ Wymuszonego Kombo
+        BanComboTitleText: Typ Zbanowanego Kombo
+        TitleText: Wybierz typ komba.
+        ForcedRoleModifierComboText: >-
+          Gracz zawsze bedzie mial modyfikator, {1},
+
+          jesli jego glowna rola to {0}
+        ForcedModifierModifierComboText: >-
+          Gracz z jednym z modyfikatorow, {0} lub {1},
+
+          zawsze bedzie mial tez ten drugi.
+        ForcedRoleRoleComboText: >-
+          {1} zawsze pojawi sie, gdy pojawi sie {0}.
+
+          Jesli nie ma wystarczajacej liczby graczy dla {1}, to {0} zostanie pominiety.
+        BannedRoleRoleComboText: >-
+          {0} i {1} nie moga pojawic sie
+
+          razem w tej samej grze.
+        BannedRoleModifierComboText: >-
+          Gracz z rola {0}
+
+          nie moze miec modyfikatora {1}.
+        BannedModifierModifierComboText: >-
+          Gracz nie moze miec modyfikatorow
+
+          {0} i {1} w tym samym czasie.
+      CreateComboArea:
+        NothingFound: >-
+          Nie ma rol o nazwie, ktora wprowadziles.
+
+          Czy zrobiles literowke?
+        SelectRolesText: >-
+          Wybierz role dla swojego kombo,
+
+          nastepnie kliknij przycisk dalej.
+        SearchTooVague: >-
+          Twoje wyszukiwanie jest zbyt ogolne!
+
+          Wpisz wiecej znakow nazwy roli.
+        SelectedRoles: 'Wybrane Role:'
+        ReturnText: Wroc
+        NextText: Dalej
+      FinalizeArea:
+        TitleText: Czy na pewno te informacje sa poprawne?
+        CreateComboText: Stworz Kombo
+      MainArea:
+        TitleText: Menu Edycji Kombo
+        AddComboText: Dodaj Kombo
+        CycleUpText: Przewin w Gore
+        CycleDownText: Przewin w Dol
+        PresetText: Preset {0}
+  Factions:
+    Crewmates:
+      Name: Crewmaci
+      Description: Skoncz zadania i wyrzuc zabojcow w glosowaniu.
+    Impostors:
+      Name: Impostorzy
+      Description: Zabij wszystkich nie-Impostorow.
+    Madmates:
+      Name: Madmaci
+      Description: Pomoz Impostorom wygrac.
+    Neutral:
+      Name: Neutralni
+      Description: Przezyj i wykonaj swoj cel.
+    Modifiers:
+      Name: Modyfikatory
+      Description: Te role dodaja dodatkowe funkcje do twojej bazowej roli.
+    TheUndead:
+      Name: Undead
+      Description: Zabij wszystkich, ktorzy sprzeciwiaja sie Undead.
+    ColorTeam:
+      Name: Color Team
+      Description: Druzyna, ktora jest sojusznikiem wszystkich w tym samym kolorze.
+    NeutralKillers:
+      Name: Neutralni Zabojcy
+      Description: Zabij wszystkich innych i badz ostatnim przy zyciu.
+  Constants:
+    DeathNames:
+      Killed: Zabity
+      Suicide: Samobojstwo
+      Exiled: Wyrzucony
+      Bombed: Zbombardowany
+      Bitten: Ugryziony
+      Cursed: Przeklety
+      Incinerated: Spalony
+      Misfired: Pomylka Broni (Misfire)
+      Parried: Sparowany
+      Sniped: Zastrzelony
+      Executed: Stracony
+      Guessed: Zgadzony
+  Meetings:
+    RoleRevealText: '{0} to byl(a) {1}.'
+    RemainingImpostorsText: 'Pozostalo {0} impostorow.'
+    NoImpostorsText: Brak pozostalych impostorow.
+  Internals:
+    FatalErrorHandler:
+      FatalErrorTitle: Blad Krytyczny
+      FatalErrorMessage: Napotkano blad krytyczny podczas [{0}]
+      CheckLogMessage: Sprawdz logi, aby uzyskac wiecej informacji.
+  PrivacyPolicy:
+    PrivacyPolicyText: Projekt Lotus ma kilka opcjonalnych funkcji, ktore wymagaja udostepniania danych naszemu API. Takich jak raporty o bledach i informacje o lobby. Sprawdz nasza <link=https://beta.lotusau.top/privacy/>Polityke Prywatnosci</link> po wiecej szczegolow. Czy chcesz wlaczyc te dodatkowe funkcje i pozwolic nam przetwarzac twoje dane?
+    UpdatedPrivacyPolicy: Zrewidowalismy nasza <link=https://beta.lotusau.top/privacy/>Polityke Prywatnosci</link>. Zachecamy do zapoznania sie z nia i odpowiedniej aktualizacji swoich preferencji. Czy nadal chcesz miec wlaczone te funkcje i pozwolic nam przetwarzac twoje dane?
+    DisagreeText: Wszystkie nieobowiazkowe zadania sieciowe zostaly wylaczone. Mozesz wlaczyc konkretne przez menu Ustawien.
+    AcceptText: Wszystkie zadania sieciowe zostaly wlaczone. Mozesz wylaczyc konkretne przez menu Ustawien.
+    CustomizeText: Twoje preferencje zostaly zapisane. Mozesz je edytowac w dowolnym momencie przez menu Ustawien.
+    PrivacyPolicyTitle: 'Projekt: Polityka Prywatnosci Lotus'
+    ManageData: Zarzadzaj Zbieraniem Danych
+    CustomizeButtonText: Dostosuj
+    DisagreeButtonText: Nie
+    AcceptButtonText: Tak
+  Whitelist:
+    WhitelistBan: "{0} zostal(a) wyrzucony(a), poniewaz nie byl(a) na bialej liscie."
+  PetWarning:
+    WarningToHost: >-
+      Nastepujacy gracze nie maja zwierzakow: {0}
+
+      Nastepujace wlaczone role wymagaja zwierzaka: {1}
+    WarningToPlayer: Wlaczone sa role, ktore wymagaja zwierzakow. Prosze wyposazyc sie w jednego w sekcji kosmetykow.
+    WarningTitle: ⚠ OSTRZEZENIE ⚠
